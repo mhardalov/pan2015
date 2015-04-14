@@ -8,7 +8,7 @@
   <name>Personality detection</name>
   
   <properties>
-		<start-class></start-class>
+		<start-class>pan.pers.console.Evaluate</start-class>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
@@ -113,7 +113,7 @@
 				  <archive>
 				    <manifest>
 					<addClasspath>true</addClasspath>
-					<mainClass>com.mkyong.core.utils.App</mainClass>
+					<mainClass>pan.pers.console.Evaluate</mainClass>
 					<classpathPrefix>dependency-jars/</classpathPrefix>
 				    </manifest>
 				  </archive>
