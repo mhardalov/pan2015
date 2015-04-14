@@ -1,0 +1,29 @@
+Phase: labelToAnnots
+Input: person
+Options: control = appelt
+
+Rule: labelToAnnots
+(
+ {person}
+) :ent
+-->
+: ent {
+    Annotation ent = entAnnots.iterator().next();
+    String t = (String) ent.getFeatures().get("sex");
+    if(t != null && !t.isEmpty()) {
+		FeatureMap fm = Factory.newFeatureMap();
+		if(ent.getFeatures().get("scores") != null) {
+			fm.put("scores", ent.getFeatures().get("scores"));
+		}
+		outputAS.add(entAnnots.firstNode(), entAnnots.lastNode(), t, fm);
+	}
+	
+	t = (String) ent.getFeatures().get("age");
+    if(t != null && !t.isEmpty()) {
+		FeatureMap fm = Factory.newFeatureMap();
+		if(ent.getFeatures().get("scores") != null) {
+			fm.put("scores", ent.getFeatures().get("scores"));
+		}
+		outputAS.add(entAnnots.firstNode(), entAnnots.lastNode(), t, fm);
+	}
+}

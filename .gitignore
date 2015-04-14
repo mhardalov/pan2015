@@ -10,4 +10,4 @@ release.properties
 .classpath
 .settings
 /bin/
-
+src/main/resources/models/*
