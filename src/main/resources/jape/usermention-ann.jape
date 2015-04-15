@@ -1,0 +1,13 @@
+Phase: userMention
+Input: Token
+Options: control = appelt
+
+Rule: userMention
+(
+	{Token.string == "@"}
+	{Token.string == "username"}
+):User
+-->
+:User.UserMention = {rule = "userMention"}
+
+

@@ -39,6 +39,22 @@ inputAS["person"].each { sn ->
 			}
         }
     }
+
+    for(int i = 0; i < sortedToks.size(); ++i) {        
+				String kind = (String)sortedToks[i].getFeatures().get("kind");
+				if (kind != "word") {
+					continue;
+				}
+	
+        String category = (String)sortedToks[i].getFeatures().get("category");
+				fName = "cat:" + category + (String)sortedToks[i].getFeatures().get("string");
+
+        if(sn.features[fName] == null) {
+					sn.features[fName] = 1
+				} else {
+					sn.features[fName] = sn.features[fName] + 1
+				}        
+    }
     
 	lookups = inputAS.get("Lookup", sn.start(), sn.end());
 

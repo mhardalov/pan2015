@@ -1,0 +1,11 @@
+Phase: hashtagsToAnnotations
+Input: Token
+Options: control = appelt
+
+Rule: hashtagsToAnnotations
+(
+	({Token.string == "#"})
+	({Token.kind == word}):Hashtag
+)
+-->
+:Hashtag.Hashtag = {rule = "hashtagsToAnnotations"}
