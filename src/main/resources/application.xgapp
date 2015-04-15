@@ -13,6 +13,33 @@
       <gate.util.persistence.PersistenceManager-URLHolder>
         <urlString>$relpath$plugins/libsvm-pr/</urlString>
       </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$gatehome$plugins/ANNIE/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$gatehome$plugins/Groovy/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$gatehome$plugins/Tools/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$gatehome$plugins/Language_Identification/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$gatehome$plugins/Lang_German/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$gatehome$plugins/Tagger_Stanford/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$gatehome$plugins/Twitter/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$gatehome$plugins/OpenNLP/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$relpath$plugins/OpenNLP/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
     </localList>
     <collectionType>java.util.ArrayList</collectionType>
   </urlList>
@@ -50,12 +77,12 @@
                   <null/>
                 </entry>
                 <entry>
-                  <string>keepOriginalMarkupsAS</string>
-                  <boolean>true</boolean>
-                </entry>
-                <entry>
                   <string>setsToRemove</string>
                   <null/>
+                </entry>
+                <entry>
+                  <string>keepOriginalMarkupsAS</string>
+                  <boolean>true</boolean>
                 </entry>
               </localMap>
             </runtimeParams>
@@ -155,10 +182,6 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
-                  <string>encoding</string>
-                  <string>UTF-8</string>
-                </entry>
-                <entry>
                   <string>tokeniserRulesURL</string>
                   <gate.util.persistence.PersistenceManager-URLHolder>
                     <urlString>$relpath$plugins/ANNIE/resources/tokeniser/DefaultTokeniser.rules</urlString>
@@ -169,6 +192,10 @@
                   <gate.util.persistence.PersistenceManager-URLHolder>
                     <urlString>$relpath$plugins/ANNIE/resources/tokeniser/postprocess.jape</urlString>
                   </gate.util.persistence.PersistenceManager-URLHolder>
+                </entry>
+                <entry>
+                  <string>encoding</string>
+                  <string>UTF-8</string>
                 </entry>
               </localMap>
             </initParams>
@@ -214,22 +241,22 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
-                  <string>listsURL</string>
-                  <gate.util.persistence.PersistenceManager-URLHolder>
-                    <urlString>$relpath$dictionaries/lists.def</urlString>
-                  </gate.util.persistence.PersistenceManager-URLHolder>
-                </entry>
-                <entry>
                   <string>caseSensitive</string>
                   <boolean>false</boolean>
+                </entry>
+                <entry>
+                  <string>encoding</string>
+                  <string>UTF-8</string>
                 </entry>
                 <entry>
                   <string>gazetteerFeatureSeparator</string>
                   <string>,</string>
                 </entry>
                 <entry>
-                  <string>encoding</string>
-                  <string>UTF-8</string>
+                  <string>listsURL</string>
+                  <gate.util.persistence.PersistenceManager-URLHolder>
+                    <urlString>$relpath$dictionaries/lists.def</urlString>
+                  </gate.util.persistence.PersistenceManager-URLHolder>
                 </entry>
               </localMap>
             </initParams>
@@ -461,7 +488,6 @@
                   <string>quietMode</string>
                   <boolean>false</boolean>
                 </entry>
-                
               </localMap>
             </runtimeParams>
             <resourceType>code.gateplugins.libsvm.SvmClassifierPr</resourceType>
@@ -588,7 +614,6 @@
                   <string>quietMode</string>
                   <boolean>false</boolean>
                 </entry>
-                
               </localMap>
             </runtimeParams>
             <resourceType>code.gateplugins.libsvm.SvmClassifierPr</resourceType>
@@ -715,7 +740,6 @@
                   <string>quietMode</string>
                   <boolean>false</boolean>
                 </entry>
-                
               </localMap>
             </runtimeParams>
             <resourceType>code.gateplugins.libsvm.SvmClassifierPr</resourceType>
@@ -842,7 +866,6 @@
                   <string>quietMode</string>
                   <boolean>false</boolean>
                 </entry>
-                  
               </localMap>
             </runtimeParams>
             <resourceType>code.gateplugins.libsvm.SvmClassifierPr</resourceType>
@@ -969,7 +992,6 @@
                   <string>quietMode</string>
                   <boolean>false</boolean>
                 </entry>
-                
               </localMap>
             </runtimeParams>
             <resourceType>code.gateplugins.libsvm.SvmClassifierPr</resourceType>
@@ -1096,7 +1118,6 @@
                   <string>quietMode</string>
                   <boolean>false</boolean>
                 </entry>
-                
               </localMap>
             </runtimeParams>
             <resourceType>code.gateplugins.libsvm.SvmClassifierPr</resourceType>
@@ -1208,12 +1229,12 @@
                   <null/>
                 </entry>
                 <entry>
-                  <string>inputASName</string>
-                  <string>GOLD</string>
-                </entry>
-                <entry>
                   <string>enableDebugging</string>
                   <boolean>false</boolean>
+                </entry>
+                <entry>
+                  <string>inputASName</string>
+                  <string>GOLD</string>
                 </entry>
               </localMap>
             </runtimeParams>
@@ -1252,7 +1273,6 @@
             </features>
           </pr>
         </gate.util.persistence.AnalyserRunningStrategyPersistence>
-        
       </localList>
       <collectionType>java.util.ArrayList</collectionType>
     </strategiesList>
@@ -1278,7 +1298,6 @@
         <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[18]/pr"/>
         <gate.util.persistence.PRPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[19]/pr"/>
         <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[20]/pr"/>
-        
       </localList>
       <collectionType>java.util.ArrayList</collectionType>
     </prList>
