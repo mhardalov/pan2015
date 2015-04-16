@@ -38,22 +38,6 @@
     <collectionType>java.util.ArrayList</collectionType>
   </urlList>
   <application class="gate.util.persistence.ConditionalSerialAnalyserControllerPersistence">
-    <corpus class="gate.util.persistence.CorpusPersistence">
-      <dsData class="gate.util.persistence.DSPersistence">
-        <className>gate.persist.SerialDataStore</className>
-        <storageUrlString>file:/home/momchil/Desktop/TextMining/data/</storageUrlString>
-        <storageUrl class="gate.util.persistence.PersistenceManager$URLHolder">
-          <urlString>$relpath$../../../../../data/</urlString>
-        </storageUrl>
-      </dsData>
-      <persistenceID class="string">en-test___1428999862228___2604</persistenceID>
-      <resourceType>gate.corpora.SerialCorpusImpl</resourceType>
-      <resourceName>en-test</resourceName>
-      <initParams class="gate.util.persistence.MapPersistence">
-        <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-        <localMap/>
-      </initParams>
-    </corpus>
     <strategiesList class="gate.util.persistence.CollectionPersistence">
       <localList>
         <gate.util.persistence.AnalyserRunningStrategyPersistence>
@@ -169,11 +153,12 @@
           <featureName></featureName>
           <featureValue></featureValue>
           <pr class="gate.util.persistence.ConditionalSerialAnalyserControllerPersistence">
-            <corpus class="gate.util.persistence.CorpusPersistence" reference="../../../../../corpus"/>
             <strategiesList class="gate.util.persistence.CollectionPersistence">
               <localList>
                 <gate.util.persistence.AnalyserRunningStrategyPersistence>
                   <runMode>1</runMode>
+                  <featureName></featureName>
+                  <featureValue></featureValue>
                   <pr class="gate.util.persistence.LanguageAnalyserPersistence">
                     <runtimeParams class="gate.util.persistence.MapPersistence">
                       <mapType>gate.util.SimpleFeatureMapImpl</mapType>
@@ -220,11 +205,64 @@
                   </pr>
                 </gate.util.persistence.AnalyserRunningStrategyPersistence>
                 <gate.util.persistence.AnalyserRunningStrategyPersistence>
+                  <runMode>1</runMode>
+                  <pr class="gate.util.persistence.PRPersistence">
+                    <runtimeParams class="gate.util.persistence.MapPersistence">
+                      <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+                      <localMap>
+                        <entry>
+                          <string>corpus</string>
+                          <null/>
+                        </entry>
+                        <entry>
+                          <string>scriptParams</string>
+                          <gate.util.persistence.MapPersistence>
+                            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+                            <localMap/>
+                          </gate.util.persistence.MapPersistence>
+                        </entry>
+                        <entry>
+                          <string>outputASName</string>
+                          <null/>
+                        </entry>
+                        <entry>
+                          <string>inputASName</string>
+                          <null/>
+                        </entry>
+                        <entry>
+                          <string>document</string>
+                          <null/>
+                        </entry>
+                      </localMap>
+                    </runtimeParams>
+                    <resourceType>gate.groovy.ScriptPR</resourceType>
+                    <resourceName>Language Validation</resourceName>
+                    <initParams class="gate.util.persistence.MapPersistence">
+                      <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+                      <localMap>
+                        <entry>
+                          <string>encoding</string>
+                          <string>UTF-8</string>
+                        </entry>
+                        <entry>
+                          <string>scriptURL</string>
+                          <gate.util.persistence.PersistenceManager-URLHolder>
+                            <urlString>$relpath$groovy/language-validation.groovy</urlString>
+                          </gate.util.persistence.PersistenceManager-URLHolder>
+                        </entry>
+                      </localMap>
+                    </initParams>
+                    <features class="gate.util.persistence.MapPersistence">
+                      <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+                      <localMap/>
+                    </features>
+                  </pr>
+                </gate.util.persistence.AnalyserRunningStrategyPersistence>
+                <gate.util.persistence.AnalyserRunningStrategyPersistence>
                   <runMode>4</runMode>
                   <featureName>lang</featureName>
                   <featureValue>english</featureValue>
                   <pr class="gate.util.persistence.ConditionalSerialAnalyserControllerPersistence">
-                    <corpus class="gate.util.persistence.CorpusPersistence" reference="../../../../../../../../../corpus"/>
                     <strategiesList class="gate.util.persistence.CollectionPersistence">
                       <localList>
                         <gate.util.persistence.AnalyserRunningStrategyPersistence>
@@ -514,7 +552,6 @@
                   <featureName>lang</featureName>
                   <featureValue>dutch</featureValue>
                   <pr class="gate.util.persistence.ConditionalSerialAnalyserControllerPersistence">
-                    <corpus class="gate.util.persistence.CorpusPersistence" reference="../../../../../../../../../corpus"/>
                     <strategiesList class="gate.util.persistence.CollectionPersistence">
                       <localList>
                         <gate.util.persistence.AnalyserRunningStrategyPersistence>
@@ -718,7 +755,6 @@
                   <featureName>lang</featureName>
                   <featureValue>italian</featureValue>
                   <pr class="gate.util.persistence.ConditionalSerialAnalyserControllerPersistence">
-                    <corpus class="gate.util.persistence.CorpusPersistence" reference="../../../../../../../../../corpus"/>
                     <strategiesList class="gate.util.persistence.CollectionPersistence">
                       <localList>
                         <gate.util.persistence.AnalyserRunningStrategyPersistence>
@@ -872,7 +908,6 @@
                   <featureName>lang</featureName>
                   <featureValue>spanish</featureValue>
                   <pr class="gate.util.persistence.ConditionalSerialAnalyserControllerPersistence">
-                    <corpus class="gate.util.persistence.CorpusPersistence" reference="../../../../../../../../../corpus"/>
                     <strategiesList class="gate.util.persistence.CollectionPersistence">
                       <localList>
                         <gate.util.persistence.AnalyserRunningStrategyPersistence>
@@ -924,7 +959,7 @@
                           <runMode>1</runMode>
                           <featureName></featureName>
                           <featureValue></featureValue>
-                          <pr class="gate.util.persistence.LanguageAnalyserPersistence" reference="../../../../../../gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr/strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr"/>
+                          <pr class="gate.util.persistence.LanguageAnalyserPersistence" reference="../../../../../../gate.util.persistence.AnalyserRunningStrategyPersistence[3]/pr/strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr"/>
                         </gate.util.persistence.AnalyserRunningStrategyPersistence>
                         <gate.util.persistence.AnalyserRunningStrategyPersistence>
                           <runMode>1</runMode>
@@ -1022,7 +1057,7 @@
                     <prList class="gate.util.persistence.CollectionPersistence">
                       <localList>
                         <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence/pr"/>
-                        <gate.util.persistence.LanguageAnalyserPersistence reference="../../../../../gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr/strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr"/>
+                        <gate.util.persistence.LanguageAnalyserPersistence reference="../../../../../gate.util.persistence.AnalyserRunningStrategyPersistence[3]/pr/strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr"/>
                         <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[3]/pr"/>
                         <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[4]/pr"/>
                       </localList>
@@ -1184,12 +1219,13 @@
             <prList class="gate.util.persistence.CollectionPersistence">
               <localList>
                 <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence/pr"/>
-                <gate.util.persistence.ConditionalSerialAnalyserControllerPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr"/>
+                <gate.util.persistence.PRPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr"/>
                 <gate.util.persistence.ConditionalSerialAnalyserControllerPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[3]/pr"/>
                 <gate.util.persistence.ConditionalSerialAnalyserControllerPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[4]/pr"/>
                 <gate.util.persistence.ConditionalSerialAnalyserControllerPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[5]/pr"/>
-                <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[6]/pr"/>
+                <gate.util.persistence.ConditionalSerialAnalyserControllerPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[6]/pr"/>
                 <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[7]/pr"/>
+                <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[8]/pr"/>
               </localList>
               <collectionType>java.util.ArrayList</collectionType>
             </prList>

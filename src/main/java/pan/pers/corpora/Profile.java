@@ -8,6 +8,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import pan.pers.console.GenderEnum;
 import pan.pers.console.LanguageEnum;
 import pan.pers.console.Utils;
 
@@ -23,7 +24,7 @@ public class Profile {
 	/**
 	 * Gender
 	 */
-	public String sex;
+	public GenderEnum sex;
 	
 	
 	/**
@@ -69,7 +70,7 @@ public class Profile {
 		this();
 		this.id = id;
 		this.age = age;
-		this.sex = sex;
+		this.sex = GenderEnum.findByText(sex);
 		this.o = o;
 		this.c = c;
 		this.e = e;
@@ -138,13 +139,17 @@ public class Profile {
 
 	public void set(FeatureMap docFeatures) {
 		this.age = (String) docFeatures.get("age");
-		this.sex = (String) docFeatures.get("sex");
+		this.sex = GenderEnum.findByText((String) docFeatures.get("sex"));
 		this.o = (double) docFeatures.get("o");
 		this.c = (double) docFeatures.get("c");
 		this.e = (double) docFeatures.get("e");
 		this.a = (double) docFeatures.get("a");
 		this.s = (double) docFeatures.get("s");
 		this.language = LanguageEnum.findByText((String) docFeatures.get("lang"));
+	}
+	
+	public String getGender() {
+		return this.sex.toString();
 	}
 	
 	public String getLang() {

@@ -7,7 +7,7 @@ package pan.pers.console;
 public enum LanguageEnum {
 	ENGLISH("english", "en"),
 	SPANISH("spanish", "es"),
-	ITALIAN("italina", "it"),
+	ITALIAN("italian", "it"),
 	DUTCH("dutch", "nl");
 	
 	
@@ -25,7 +25,11 @@ public enum LanguageEnum {
 	            return v;
 	        }
 	    }
-	    return null;
+	    
+	    //if we can't determine the language we return english
+	    //User806 marked as hungarian
+	    //TODO: Check if it valid
+	    return ENGLISH;
 	}
 
 	@Override

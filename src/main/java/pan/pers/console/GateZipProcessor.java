@@ -70,7 +70,7 @@ public class GateZipProcessor {
 		writer.write(" type=\"twitter\"\n");
 		writer.write(" lang=\""+ p.getLang() + "\"\n");
 		writer.write(" age_group=\"" + p.age + "\"\n");
-		writer.write(" gender=\"" + p.sex + "\"\n");
+		writer.write(" gender=\"" + p.getGender() + "\"\n");
 		writer.write(" extroverted=\"" + p.e + "\"\n");
 		writer.write(" stable=\"" + p.s + "\"\n");
 		writer.write(" agreeable=\"" + p.a + "\"\n");
