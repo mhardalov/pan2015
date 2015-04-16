@@ -68,7 +68,7 @@ public class GateZipProcessor {
 		FileWriter writer = new FileWriter(out);
 		writer.write("<author id=\"" + p.id + "\"\n");
 		writer.write(" type=\"twitter\"\n");
-		writer.write(" lang=\"en\"\n"); // TODO: other languages
+		writer.write(" lang=\""+ p.getLang() + "\"\n");
 		writer.write(" age_group=\"" + p.age + "\"\n");
 		writer.write(" gender=\"" + p.sex + "\"\n");
 		writer.write(" extroverted=\"" + p.e + "\"\n");

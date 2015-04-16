@@ -66,11 +66,14 @@ public class PanCorpusCreator {
 		for(String line: lines) {
 			String[] parts = line.split(":::");
 			String id = parts[0];
+			
+			// TODO: parse language
 			Profile p = new Profile(id, parts[1], parts[2], Double.parseDouble(parts[3]),
 					Double.parseDouble(parts[4]),
 					Double.parseDouble(parts[5]),
 					Double.parseDouble(parts[6]),
-					Double.parseDouble(parts[7]));
+					Double.parseDouble(parts[7]),
+					"");
 			result.put(id, p);
 		}
 		return result;
