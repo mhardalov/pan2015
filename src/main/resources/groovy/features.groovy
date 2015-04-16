@@ -26,11 +26,13 @@ inputAS["person"].each { sn ->
         for(int i = 0; i < sortedToks.size() - n + 1; ++i) {
             StringBuilder sb = new StringBuilder();
             String delim = ""
+            
             for (int j = 0; j < n; j++) {
-				word = strings[i + j].toLowerCase();
+								word = strings[i + j].toLowerCase();
                 sb.append(delim).append(word);
-				delim = "_";
+								delim = "_";
             }
+            
             fName = n + "gr:" + sb.toString();
             if(sn.features[fName] == null) {
 				sn.features[fName] = 1
@@ -40,20 +42,28 @@ inputAS["person"].each { sn ->
         }
     }
 
-    for(int i = 0; i < sortedToks.size(); ++i) {        
-				String kind = (String)sortedToks[i].getFeatures().get("kind");
-				if (kind != "word") {
-					continue;
-				}
+    AnnotationSet foundUrls = doc.getAnnotations().get("Address");
+    AnnotationSet foundHashtags = doc.getAnnotations().get("Hashtag");
+		
+	//Pos tag features
+    for(int i = 0; i < sortedToks.size(); ++i) {
+    	Annotation token = sortedToks[i];
+		String kind = (String)token.getFeatures().get("kind");		
+
+		//We must skip it if it's not a word, it is an url, or hashtag.
+		if (kind != "word" || foundUrls.get(token.getStartNode().getOffset(), token.getEndNode().getOffset()).size() > 0 ||
+			foundHashtags.get(token.getStartNode().getOffset(), token.getEndNode().getOffset()).size() > 0) {
+			continue;
+		}
 	
-        String category = (String)sortedToks[i].getFeatures().get("category");
-				fName = "cat:" + category + (String)sortedToks[i].getFeatures().get("string");
+        String category = (String)token.getFeatures().get("category");
+				fName = "cat:" + category;
 
         if(sn.features[fName] == null) {
-					sn.features[fName] = 1
-				} else {
-					sn.features[fName] = sn.features[fName] + 1
-				}        
+			sn.features[fName] = 1
+		} else {
+			sn.features[fName] = sn.features[fName] + 1
+		}        
     }
     
 	lookups = inputAS.get("Lookup", sn.start(), sn.end());

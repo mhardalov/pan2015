@@ -14,18 +14,55 @@
         <urlString>$relpath$plugins/libsvm-pr/</urlString>
       </gate.util.persistence.PersistenceManager-URLHolder>
       <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$gatehome$plugins/ANNIE/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$gatehome$plugins/Groovy/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$gatehome$plugins/Tools/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$gatehome$plugins/Language_Identification/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$gatehome$plugins/Lang_German/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$gatehome$plugins/Tagger_Stanford/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$gatehome$plugins/Twitter/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$gatehome$plugins/OpenNLP/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
         <urlString>$relpath$plugins/OpenNLP/</urlString>
       </gate.util.persistence.PersistenceManager-URLHolder>
       <gate.util.persistence.PersistenceManager-URLHolder>
         <urlString>$relpath$plugins/Language_Identification/</urlString>
       </gate.util.persistence.PersistenceManager-URLHolder>
-      <gate.util.persistence.PersistenceManager-URLHolder>
-        <urlString>$gatehome$plugins/Tagger_Stanford/</urlString>
-      </gate.util.persistence.PersistenceManager-URLHolder>
     </localList>
     <collectionType>java.util.ArrayList</collectionType>
   </urlList>
   <application class="gate.util.persistence.ConditionalSerialAnalyserControllerPersistence">
+    <corpus class="gate.util.persistence.CorpusPersistence">
+      <dsData class="gate.util.persistence.DSPersistence">
+        <className>gate.persist.SerialDataStore</className>
+        <storageUrlString>file:/home/momchil/Desktop/TextMining/data/</storageUrlString>
+        <storageUrl class="gate.util.persistence.PersistenceManager$URLHolder">
+          <urlString>$relpath$../../../../../data/</urlString>
+        </storageUrl>
+      </dsData>
+      <persistenceID class="string">en-train___1428999862274___1639</persistenceID>
+      <resourceType>gate.corpora.SerialCorpusImpl</resourceType>
+      <resourceName>en-train</resourceName>
+      <initParams class="gate.util.persistence.MapPersistence">
+        <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+        <localMap/>
+      </initParams>
+    </corpus>
     <strategiesList class="gate.util.persistence.CollectionPersistence">
       <localList>
         <gate.util.persistence.AnalyserRunningStrategyPersistence>
@@ -47,7 +84,15 @@
                   </gate.util.persistence.CollectionPersistence>
                 </entry>
                 <entry>
-                  <string>document</string>
+                  <string>keepOriginalMarkupsAS</string>
+                  <boolean>true</boolean>
+                </entry>
+                <entry>
+                  <string>corpus</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>setsToRemove</string>
                   <null/>
                 </entry>
                 <entry>
@@ -55,15 +100,7 @@
                   <null/>
                 </entry>
                 <entry>
-                  <string>corpus</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>keepOriginalMarkupsAS</string>
-                  <boolean>true</boolean>
-                </entry>
-                <entry>
-                  <string>setsToRemove</string>
+                  <string>document</string>
                   <null/>
                 </entry>
               </localMap>
@@ -89,6 +126,10 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
+                  <string>tagASName</string>
+                  <string>Original markups</string>
+                </entry>
+                <entry>
                   <string>textTagName</string>
                   <null/>
                 </entry>
@@ -105,8 +146,12 @@
                   <boolean>true</boolean>
                 </entry>
                 <entry>
-                  <string>tagASName</string>
-                  <string>Original markups</string>
+                  <string>outputASName</string>
+                  <string></string>
+                </entry>
+                <entry>
+                  <string>inputASName</string>
+                  <string>GOLD</string>
                 </entry>
                 <entry>
                   <string>annotationTypes</string>
@@ -116,14 +161,6 @@
                     </localList>
                     <collectionType>java.util.ArrayList</collectionType>
                   </gate.util.persistence.CollectionPersistence>
-                </entry>
-                <entry>
-                  <string>inputASName</string>
-                  <string>GOLD</string>
-                </entry>
-                <entry>
-                  <string>outputASName</string>
-                  <string></string>
                 </entry>
               </localMap>
             </runtimeParams>
@@ -144,6 +181,7 @@
           <featureName></featureName>
           <featureValue></featureValue>
           <pr class="gate.util.persistence.ConditionalSerialAnalyserControllerPersistence">
+            <corpus class="gate.util.persistence.CorpusPersistence" reference="../../../../../corpus"/>
             <strategiesList class="gate.util.persistence.CollectionPersistence">
               <localList>
                 <gate.util.persistence.AnalyserRunningStrategyPersistence>
@@ -159,11 +197,60 @@
                           <null/>
                         </entry>
                         <entry>
-                          <string>document</string>
+                          <string>annotationType</string>
                           <null/>
                         </entry>
                         <entry>
                           <string>corpus</string>
+                          <null/>
+                        </entry>
+                        <entry>
+                          <string>languageFeatureName</string>
+                          <string>lang</string>
+                        </entry>
+                        <entry>
+                          <string>document</string>
+                          <null/>
+                        </entry>
+                      </localMap>
+                    </runtimeParams>
+                    <resourceType>org.knallgrau.utils.textcat.LanguageIdentifier</resourceType>
+                    <resourceName>Language Identification</resourceName>
+                    <initParams class="gate.util.persistence.MapPersistence">
+                      <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+                      <localMap>
+                        <entry>
+                          <string>configURL</string>
+                          <gate.util.persistence.PersistenceManager-URLHolder>
+                            <urlString>$gatehome$plugins/Language_Identification/resources/default-names.conf</urlString>
+                          </gate.util.persistence.PersistenceManager-URLHolder>
+                        </entry>
+                      </localMap>
+                    </initParams>
+                    <features class="gate.util.persistence.MapPersistence">
+                      <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+                      <localMap/>
+                    </features>
+                  </pr>
+                </gate.util.persistence.AnalyserRunningStrategyPersistence>
+                <gate.util.persistence.AnalyserRunningStrategyPersistence>
+                  <runMode>1</runMode>
+                  <featureName></featureName>
+                  <featureValue></featureValue>
+                  <pr class="gate.util.persistence.LanguageAnalyserPersistence">
+                    <runtimeParams class="gate.util.persistence.MapPersistence">
+                      <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+                      <localMap>
+                        <entry>
+                          <string>annotationSetName</string>
+                          <null/>
+                        </entry>
+                        <entry>
+                          <string>corpus</string>
+                          <null/>
+                        </entry>
+                        <entry>
+                          <string>document</string>
                           <null/>
                         </entry>
                       </localMap>
@@ -174,14 +261,14 @@
                       <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                       <localMap>
                         <entry>
-                          <string>encoding</string>
-                          <string>UTF-8</string>
-                        </entry>
-                        <entry>
                           <string>tokeniserRulesURL</string>
                           <gate.util.persistence.PersistenceManager-URLHolder>
                             <urlString>$gatehome$plugins/ANNIE/resources/tokeniser/DefaultTokeniser.rules</urlString>
                           </gate.util.persistence.PersistenceManager-URLHolder>
+                        </entry>
+                        <entry>
+                          <string>encoding</string>
+                          <string>UTF-8</string>
                         </entry>
                         <entry>
                           <string>transducerGrammarURL</string>
@@ -210,11 +297,11 @@
                           <null/>
                         </entry>
                         <entry>
-                          <string>document</string>
+                          <string>corpus</string>
                           <null/>
                         </entry>
                         <entry>
-                          <string>corpus</string>
+                          <string>document</string>
                           <null/>
                         </entry>
                       </localMap>
@@ -225,19 +312,15 @@
                       <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                       <localMap>
                         <entry>
-                          <string>externalSplitListURL</string>
-                          <gate.util.persistence.PersistenceManager-URLHolder>
-                            <urlString>$relpath$plugins/ANNIE/resources/regex-splitter/external-split-patterns.txt</urlString>
-                          </gate.util.persistence.PersistenceManager-URLHolder>
-                        </entry>
-                        <entry>
-                          <string>encoding</string>
-                          <string>UTF-8</string>
-                        </entry>
-                        <entry>
                           <string>nonSplitListURL</string>
                           <gate.util.persistence.PersistenceManager-URLHolder>
                             <urlString>$relpath$plugins/ANNIE/resources/regex-splitter/non-split-patterns.txt</urlString>
+                          </gate.util.persistence.PersistenceManager-URLHolder>
+                        </entry>
+                        <entry>
+                          <string>externalSplitListURL</string>
+                          <gate.util.persistence.PersistenceManager-URLHolder>
+                            <urlString>$relpath$plugins/ANNIE/resources/regex-splitter/external-split-patterns.txt</urlString>
                           </gate.util.persistence.PersistenceManager-URLHolder>
                         </entry>
                         <entry>
@@ -245,6 +328,10 @@
                           <gate.util.persistence.PersistenceManager-URLHolder>
                             <urlString>$relpath$plugins/ANNIE/resources/regex-splitter/internal-split-patterns.txt</urlString>
                           </gate.util.persistence.PersistenceManager-URLHolder>
+                        </entry>
+                        <entry>
+                          <string>encoding</string>
+                          <string>UTF-8</string>
                         </entry>
                       </localMap>
                     </initParams>
@@ -263,19 +350,15 @@
                       <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                       <localMap>
                         <entry>
-                          <string>outputASName</string>
-                          <null/>
-                        </entry>
-                        <entry>
-                          <string>document</string>
-                          <null/>
+                          <string>enableDebugging</string>
+                          <boolean>false</boolean>
                         </entry>
                         <entry>
                           <string>corpus</string>
                           <null/>
                         </entry>
                         <entry>
-                          <string>ontology</string>
+                          <string>outputASName</string>
                           <null/>
                         </entry>
                         <entry>
@@ -283,8 +366,12 @@
                           <null/>
                         </entry>
                         <entry>
-                          <string>enableDebugging</string>
-                          <boolean>false</boolean>
+                          <string>ontology</string>
+                          <null/>
+                        </entry>
+                        <entry>
+                          <string>document</string>
+                          <null/>
                         </entry>
                       </localMap>
                     </runtimeParams>
@@ -294,15 +381,11 @@
                       <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                       <localMap>
                         <entry>
-                          <string>encoding</string>
-                          <string>UTF-8</string>
-                        </entry>
-                        <entry>
-                          <string>annotationAccessors</string>
+                          <string>binaryGrammarURL</string>
                           <null/>
                         </entry>
                         <entry>
-                          <string>operators</string>
+                          <string>annotationAccessors</string>
                           <null/>
                         </entry>
                         <entry>
@@ -312,7 +395,11 @@
                           </gate.util.persistence.PersistenceManager-URLHolder>
                         </entry>
                         <entry>
-                          <string>binaryGrammarURL</string>
+                          <string>encoding</string>
+                          <string>UTF-8</string>
+                        </entry>
+                        <entry>
+                          <string>operators</string>
                           <null/>
                         </entry>
                       </localMap>
@@ -332,19 +419,15 @@
                       <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                       <localMap>
                         <entry>
-                          <string>outputASName</string>
-                          <null/>
-                        </entry>
-                        <entry>
-                          <string>document</string>
-                          <null/>
+                          <string>enableDebugging</string>
+                          <boolean>false</boolean>
                         </entry>
                         <entry>
                           <string>corpus</string>
                           <null/>
                         </entry>
                         <entry>
-                          <string>ontology</string>
+                          <string>outputASName</string>
                           <null/>
                         </entry>
                         <entry>
@@ -352,8 +435,12 @@
                           <null/>
                         </entry>
                         <entry>
-                          <string>enableDebugging</string>
-                          <boolean>false</boolean>
+                          <string>ontology</string>
+                          <null/>
+                        </entry>
+                        <entry>
+                          <string>document</string>
+                          <null/>
                         </entry>
                       </localMap>
                     </runtimeParams>
@@ -363,15 +450,11 @@
                       <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                       <localMap>
                         <entry>
-                          <string>encoding</string>
-                          <string>UTF-8</string>
-                        </entry>
-                        <entry>
-                          <string>annotationAccessors</string>
+                          <string>binaryGrammarURL</string>
                           <null/>
                         </entry>
                         <entry>
-                          <string>operators</string>
+                          <string>annotationAccessors</string>
                           <null/>
                         </entry>
                         <entry>
@@ -381,7 +464,11 @@
                           </gate.util.persistence.PersistenceManager-URLHolder>
                         </entry>
                         <entry>
-                          <string>binaryGrammarURL</string>
+                          <string>encoding</string>
+                          <string>UTF-8</string>
+                        </entry>
+                        <entry>
+                          <string>operators</string>
                           <null/>
                         </entry>
                       </localMap>
@@ -408,20 +495,20 @@
                               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                               <localMap>
                                 <entry>
+                                  <string>corpus</string>
+                                  <null/>
+                                </entry>
+                                <entry>
                                   <string>outputASName</string>
+                                  <string></string>
+                                </entry>
+                                <entry>
+                                  <string>inputASName</string>
                                   <string></string>
                                 </entry>
                                 <entry>
                                   <string>document</string>
                                   <null/>
-                                </entry>
-                                <entry>
-                                  <string>corpus</string>
-                                  <null/>
-                                </entry>
-                                <entry>
-                                  <string>inputASName</string>
-                                  <string></string>
                                 </entry>
                               </localMap>
                             </runtimeParams>
@@ -453,15 +540,15 @@
                               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                               <localMap>
                                 <entry>
-                                  <string>outputASName</string>
-                                  <null/>
-                                </entry>
-                                <entry>
-                                  <string>document</string>
-                                  <null/>
+                                  <string>enableDebugging</string>
+                                  <boolean>false</boolean>
                                 </entry>
                                 <entry>
                                   <string>corpus</string>
+                                  <null/>
+                                </entry>
+                                <entry>
+                                  <string>outputASName</string>
                                   <null/>
                                 </entry>
                                 <entry>
@@ -469,8 +556,8 @@
                                   <null/>
                                 </entry>
                                 <entry>
-                                  <string>enableDebugging</string>
-                                  <boolean>false</boolean>
+                                  <string>document</string>
+                                  <null/>
                                 </entry>
                               </localMap>
                             </runtimeParams>
@@ -480,15 +567,7 @@
                               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                               <localMap>
                                 <entry>
-                                  <string>encoding</string>
-                                  <string>UTF-8</string>
-                                </entry>
-                                <entry>
                                   <string>annotationAccessors</string>
-                                  <null/>
-                                </entry>
-                                <entry>
-                                  <string>operators</string>
                                   <null/>
                                 </entry>
                                 <entry>
@@ -496,6 +575,14 @@
                                   <gate.util.persistence.PersistenceManager-URLHolder>
                                     <urlString>$gatehome$plugins/ANNIE/resources/NE/main.jape</urlString>
                                   </gate.util.persistence.PersistenceManager-URLHolder>
+                                </entry>
+                                <entry>
+                                  <string>encoding</string>
+                                  <string>UTF-8</string>
+                                </entry>
+                                <entry>
+                                  <string>operators</string>
+                                  <null/>
                                 </entry>
                               </localMap>
                             </initParams>
@@ -512,20 +599,20 @@
                               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                               <localMap>
                                 <entry>
+                                  <string>corpus</string>
+                                  <null/>
+                                </entry>
+                                <entry>
                                   <string>outputASName</string>
+                                  <string></string>
+                                </entry>
+                                <entry>
+                                  <string>inputASName</string>
                                   <string></string>
                                 </entry>
                                 <entry>
                                   <string>document</string>
                                   <null/>
-                                </entry>
-                                <entry>
-                                  <string>corpus</string>
-                                  <null/>
-                                </entry>
-                                <entry>
-                                  <string>inputASName</string>
-                                  <string></string>
                                 </entry>
                               </localMap>
                             </runtimeParams>
@@ -587,20 +674,20 @@
                               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                               <localMap>
                                 <entry>
+                                  <string>corpus</string>
+                                  <null/>
+                                </entry>
+                                <entry>
                                   <string>outputASName</string>
+                                  <string></string>
+                                </entry>
+                                <entry>
+                                  <string>inputASName</string>
                                   <string></string>
                                 </entry>
                                 <entry>
                                   <string>document</string>
                                   <null/>
-                                </entry>
-                                <entry>
-                                  <string>corpus</string>
-                                  <null/>
-                                </entry>
-                                <entry>
-                                  <string>inputASName</string>
-                                  <string></string>
                                 </entry>
                               </localMap>
                             </runtimeParams>
@@ -632,20 +719,20 @@
                               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                               <localMap>
                                 <entry>
+                                  <string>corpus</string>
+                                  <null/>
+                                </entry>
+                                <entry>
                                   <string>outputASName</string>
+                                  <string></string>
+                                </entry>
+                                <entry>
+                                  <string>inputASName</string>
                                   <string></string>
                                 </entry>
                                 <entry>
                                   <string>document</string>
                                   <null/>
-                                </entry>
-                                <entry>
-                                  <string>corpus</string>
-                                  <null/>
-                                </entry>
-                                <entry>
-                                  <string>inputASName</string>
-                                  <string></string>
                                 </entry>
                               </localMap>
                             </runtimeParams>
@@ -695,6 +782,7 @@
                   <featureName>lang</featureName>
                   <featureValue>italian</featureValue>
                   <pr class="gate.util.persistence.ConditionalSerialAnalyserControllerPersistence">
+                    <corpus class="gate.util.persistence.CorpusPersistence" reference="../../../../../../../../../corpus"/>
                     <strategiesList class="gate.util.persistence.CollectionPersistence">
                       <localList>
                         <gate.util.persistence.AnalyserRunningStrategyPersistence>
@@ -706,62 +794,71 @@
                               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                               <localMap>
                                 <entry>
-                                  <string>document</string>
-                                  <null/>
+                                  <string>annotationSetName</string>
+                                  <string></string>
                                 </entry>
                                 <entry>
                                   <string>corpus</string>
                                   <null/>
                                 </entry>
                                 <entry>
-                                  <string>outputAnnotationType</string>
-                                  <string>Token</string>
+                                  <string>document</string>
+                                  <null/>
                                 </entry>
+                              </localMap>
+                            </runtimeParams>
+                            <resourceType>gate.opennlp.OpenNlpTokenizer</resourceType>
+                            <resourceName>Italian-Tokenizer</resourceName>
+                            <initParams class="gate.util.persistence.MapPersistence">
+                              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+                              <localMap>
                                 <entry>
-                                  <string>failOnMissingInputAnnotations</string>
-                                  <boolean>true</boolean>
+                                  <string>model</string>
+                                  <gate.util.persistence.PersistenceManager-URLHolder>
+                                    <urlString>$relpath$plugins/OpenNLP/models/italian/it-token.bin</urlString>
+                                  </gate.util.persistence.PersistenceManager-URLHolder>
                                 </entry>
+                              </localMap>
+                            </initParams>
+                            <features class="gate.util.persistence.MapPersistence">
+                              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+                              <localMap/>
+                            </features>
+                          </pr>
+                        </gate.util.persistence.AnalyserRunningStrategyPersistence>
+                        <gate.util.persistence.AnalyserRunningStrategyPersistence>
+                          <runMode>1</runMode>
+                          <pr class="gate.util.persistence.LanguageAnalyserPersistence">
+                            <runtimeParams class="gate.util.persistence.MapPersistence">
+                              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+                              <localMap>
                                 <entry>
-                                  <string>inputASName</string>
+                                  <string>corpus</string>
                                   <null/>
                                 </entry>
                                 <entry>
                                   <string>outputASName</string>
+                                  <string></string>
+                                </entry>
+                                <entry>
+                                  <string>inputASName</string>
+                                  <string></string>
+                                </entry>
+                                <entry>
+                                  <string>document</string>
                                   <null/>
-                                </entry>
-                                <entry>
-                                  <string>baseSentenceAnnotationType</string>
-                                  <string>Sentence</string>
-                                </entry>
-                                <entry>
-                                  <string>posTagAllTokens</string>
-                                  <boolean>true</boolean>
-                                </entry>
-                                <entry>
-                                  <string>baseTokenAnnotationType</string>
-                                  <string>Token</string>
                                 </entry>
                               </localMap>
                             </runtimeParams>
-                            <resourceType>gate.creole.POSTagger</resourceType>
+                            <resourceType>gate.opennlp.OpenNlpPOS</resourceType>
                             <resourceName>Italian-POS</resourceName>
                             <initParams class="gate.util.persistence.MapPersistence">
                               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                               <localMap>
                                 <entry>
-                                  <string>encoding</string>
-                                  <null/>
-                                </entry>
-                                <entry>
-                                  <string>rulesURL</string>
+                                  <string>model</string>
                                   <gate.util.persistence.PersistenceManager-URLHolder>
-                                    <urlString>$relpath$plugins/ANNIE/resources/heptag/ruleset</urlString>
-                                  </gate.util.persistence.PersistenceManager-URLHolder>
-                                </entry>
-                                <entry>
-                                  <string>lexiconURL</string>
-                                  <gate.util.persistence.PersistenceManager-URLHolder>
-                                    <urlString>$relpath$plugins/ANNIE/resources/heptag/lexicon</urlString>
+                                    <urlString>$relpath$plugins/OpenNLP/models/italian/it-pos-maxent.bin</urlString>
                                   </gate.util.persistence.PersistenceManager-URLHolder>
                                 </entry>
                               </localMap>
@@ -778,6 +875,7 @@
                     <prList class="gate.util.persistence.CollectionPersistence">
                       <localList>
                         <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence/pr"/>
+                        <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr"/>
                       </localList>
                       <collectionType>java.util.ArrayList</collectionType>
                     </prList>
@@ -809,20 +907,20 @@
                               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                               <localMap>
                                 <entry>
+                                  <string>corpus</string>
+                                  <null/>
+                                </entry>
+                                <entry>
                                   <string>outputASName</string>
+                                  <string></string>
+                                </entry>
+                                <entry>
+                                  <string>inputASName</string>
                                   <string></string>
                                 </entry>
                                 <entry>
                                   <string>document</string>
                                   <null/>
-                                </entry>
-                                <entry>
-                                  <string>corpus</string>
-                                  <null/>
-                                </entry>
-                                <entry>
-                                  <string>inputASName</string>
-                                  <string></string>
                                 </entry>
                               </localMap>
                             </runtimeParams>
@@ -854,20 +952,20 @@
                               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                               <localMap>
                                 <entry>
+                                  <string>corpus</string>
+                                  <null/>
+                                </entry>
+                                <entry>
                                   <string>outputASName</string>
+                                  <string></string>
+                                </entry>
+                                <entry>
+                                  <string>inputASName</string>
                                   <string></string>
                                 </entry>
                                 <entry>
                                   <string>document</string>
                                   <null/>
-                                </entry>
-                                <entry>
-                                  <string>corpus</string>
-                                  <null/>
-                                </entry>
-                                <entry>
-                                  <string>inputASName</string>
-                                  <string></string>
                                 </entry>
                               </localMap>
                             </runtimeParams>
@@ -921,10 +1019,11 @@
                 <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr"/>
                 <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[3]/pr"/>
                 <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[4]/pr"/>
-                <gate.util.persistence.ConditionalSerialAnalyserControllerPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[5]/pr"/>
+                <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[5]/pr"/>
                 <gate.util.persistence.ConditionalSerialAnalyserControllerPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[6]/pr"/>
                 <gate.util.persistence.ConditionalSerialAnalyserControllerPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[7]/pr"/>
                 <gate.util.persistence.ConditionalSerialAnalyserControllerPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[8]/pr"/>
+                <gate.util.persistence.ConditionalSerialAnalyserControllerPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[9]/pr"/>
               </localList>
               <collectionType>java.util.ArrayList</collectionType>
             </prList>
@@ -949,15 +1048,7 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
-                  <string>wholeWordsOnly</string>
-                  <boolean>true</boolean>
-                </entry>
-                <entry>
-                  <string>longestMatchOnly</string>
-                  <boolean>true</boolean>
-                </entry>
-                <entry>
-                  <string>document</string>
+                  <string>annotationSetName</string>
                   <null/>
                 </entry>
                 <entry>
@@ -965,7 +1056,15 @@
                   <null/>
                 </entry>
                 <entry>
-                  <string>annotationSetName</string>
+                  <string>longestMatchOnly</string>
+                  <boolean>true</boolean>
+                </entry>
+                <entry>
+                  <string>wholeWordsOnly</string>
+                  <boolean>true</boolean>
+                </entry>
+                <entry>
+                  <string>document</string>
                   <null/>
                 </entry>
               </localMap>
@@ -976,8 +1075,8 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
-                  <string>encoding</string>
-                  <string>UTF-8</string>
+                  <string>gazetteerFeatureSeparator</string>
+                  <string>,</string>
                 </entry>
                 <entry>
                   <string>listsURL</string>
@@ -986,8 +1085,8 @@
                   </gate.util.persistence.PersistenceManager-URLHolder>
                 </entry>
                 <entry>
-                  <string>gazetteerFeatureSeparator</string>
-                  <string>,</string>
+                  <string>encoding</string>
+                  <string>UTF-8</string>
                 </entry>
                 <entry>
                   <string>caseSensitive</string>
@@ -1010,14 +1109,6 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
-                  <string>outputASName</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>document</string>
-                  <null/>
-                </entry>
-                <entry>
                   <string>corpus</string>
                   <null/>
                 </entry>
@@ -1029,7 +1120,15 @@
                   </gate.util.persistence.MapPersistence>
                 </entry>
                 <entry>
+                  <string>outputASName</string>
+                  <null/>
+                </entry>
+                <entry>
                   <string>inputASName</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>document</string>
                   <null/>
                 </entry>
               </localMap>
@@ -1066,14 +1165,6 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
-                  <string>outputASName</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>document</string>
-                  <null/>
-                </entry>
-                <entry>
                   <string>corpus</string>
                   <null/>
                 </entry>
@@ -1090,7 +1181,15 @@
                   </gate.util.persistence.MapPersistence>
                 </entry>
                 <entry>
+                  <string>outputASName</string>
+                  <null/>
+                </entry>
+                <entry>
                   <string>inputASName</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>document</string>
                   <null/>
                 </entry>
               </localMap>
@@ -1127,7 +1226,19 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
+                  <string>labelFeature</string>
+                  <string>label</string>
+                </entry>
+                <entry>
+                  <string>commandLineParams</string>
+                  <string>-s 0 -c 1 -t 0 -m 1024</string>
+                </entry>
+                <entry>
                   <string>document</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>inputAS</string>
                   <null/>
                 </entry>
                 <entry>
@@ -1135,28 +1246,16 @@
                   <null/>
                 </entry>
                 <entry>
-                  <string>commandLineParams</string>
-                  <string>-s 0 -c 1 -t 0 -m 1024</string>
-                </entry>
-                <entry>
-                  <string>annType</string>
-                  <string>person</string>
-                </entry>
-                <entry>
-                  <string>labelFeature</string>
-                  <string>label</string>
+                  <string>quietMode</string>
+                  <boolean>false</boolean>
                 </entry>
                 <entry>
                   <string>scoresFeature</string>
                   <string>scores</string>
                 </entry>
                 <entry>
-                  <string>inputAS</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>quietMode</string>
-                  <boolean>false</boolean>
+                  <string>annType</string>
+                  <string>person</string>
                 </entry>
               </localMap>
             </runtimeParams>
@@ -1192,14 +1291,6 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
-                  <string>outputASName</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>document</string>
-                  <null/>
-                </entry>
-                <entry>
                   <string>corpus</string>
                   <null/>
                 </entry>
@@ -1216,7 +1307,15 @@
                   </gate.util.persistence.MapPersistence>
                 </entry>
                 <entry>
+                  <string>outputASName</string>
+                  <null/>
+                </entry>
+                <entry>
                   <string>inputASName</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>document</string>
                   <null/>
                 </entry>
               </localMap>
@@ -1249,40 +1348,41 @@
           <featureName></featureName>
           <featureValue></featureValue>
           <pr class="gate.util.persistence.LanguageAnalyserPersistence">
+            <corpus class="gate.util.persistence.CorpusPersistence" reference="../../../../../corpus"/>
             <runtimeParams class="gate.util.persistence.MapPersistence">
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
-                  <string>document</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>corpus</string>
-                  <null/>
+                  <string>labelFeature</string>
+                  <string>label</string>
                 </entry>
                 <entry>
                   <string>commandLineParams</string>
                   <string>-s 0 -c 1 -t 0 -m 1024</string>
                 </entry>
                 <entry>
-                  <string>annType</string>
-                  <string>person</string>
-                </entry>
-                <entry>
-                  <string>labelFeature</string>
-                  <string>label</string>
-                </entry>
-                <entry>
-                  <string>scoresFeature</string>
-                  <string>scores</string>
+                  <string>document</string>
+                  <null/>
                 </entry>
                 <entry>
                   <string>inputAS</string>
                   <null/>
                 </entry>
                 <entry>
+                  <string>corpus</string>
+                  <gate.util.persistence.CorpusPersistence reference="../../../../../../../../corpus"/>
+                </entry>
+                <entry>
                   <string>quietMode</string>
                   <boolean>false</boolean>
+                </entry>
+                <entry>
+                  <string>scoresFeature</string>
+                  <string>scores</string>
+                </entry>
+                <entry>
+                  <string>annType</string>
+                  <string>person</string>
                 </entry>
               </localMap>
             </runtimeParams>
@@ -1318,14 +1418,6 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
-                  <string>outputASName</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>document</string>
-                  <null/>
-                </entry>
-                <entry>
                   <string>corpus</string>
                   <null/>
                 </entry>
@@ -1342,7 +1434,15 @@
                   </gate.util.persistence.MapPersistence>
                 </entry>
                 <entry>
+                  <string>outputASName</string>
+                  <null/>
+                </entry>
+                <entry>
                   <string>inputASName</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>document</string>
                   <null/>
                 </entry>
               </localMap>
@@ -1379,7 +1479,19 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
+                  <string>labelFeature</string>
+                  <string>label</string>
+                </entry>
+                <entry>
+                  <string>commandLineParams</string>
+                  <string>-s 4 -c 1 -t 0 -m 1024</string>
+                </entry>
+                <entry>
                   <string>document</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>inputAS</string>
                   <null/>
                 </entry>
                 <entry>
@@ -1387,28 +1499,16 @@
                   <null/>
                 </entry>
                 <entry>
-                  <string>commandLineParams</string>
-                  <string>-s 4 -c 1 -t 0 -m 1024</string>
-                </entry>
-                <entry>
-                  <string>annType</string>
-                  <string>person</string>
-                </entry>
-                <entry>
-                  <string>labelFeature</string>
-                  <string>label</string>
+                  <string>quietMode</string>
+                  <boolean>false</boolean>
                 </entry>
                 <entry>
                   <string>scoresFeature</string>
                   <string>scores</string>
                 </entry>
                 <entry>
-                  <string>inputAS</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>quietMode</string>
-                  <boolean>false</boolean>
+                  <string>annType</string>
+                  <string>person</string>
                 </entry>
               </localMap>
             </runtimeParams>
@@ -1444,14 +1544,6 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
-                  <string>outputASName</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>document</string>
-                  <null/>
-                </entry>
-                <entry>
                   <string>corpus</string>
                   <null/>
                 </entry>
@@ -1468,7 +1560,15 @@
                   </gate.util.persistence.MapPersistence>
                 </entry>
                 <entry>
+                  <string>outputASName</string>
+                  <null/>
+                </entry>
+                <entry>
                   <string>inputASName</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>document</string>
                   <null/>
                 </entry>
               </localMap>
@@ -1505,7 +1605,19 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
+                  <string>labelFeature</string>
+                  <string>label</string>
+                </entry>
+                <entry>
+                  <string>commandLineParams</string>
+                  <string>-s 4 c 1 -t 0 -m 1024</string>
+                </entry>
+                <entry>
                   <string>document</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>inputAS</string>
                   <null/>
                 </entry>
                 <entry>
@@ -1513,28 +1625,16 @@
                   <null/>
                 </entry>
                 <entry>
-                  <string>commandLineParams</string>
-                  <string>-s 4 c 1 -t 0 -m 1024</string>
-                </entry>
-                <entry>
-                  <string>annType</string>
-                  <string>person</string>
-                </entry>
-                <entry>
-                  <string>labelFeature</string>
-                  <string>label</string>
+                  <string>quietMode</string>
+                  <boolean>false</boolean>
                 </entry>
                 <entry>
                   <string>scoresFeature</string>
                   <string>scores</string>
                 </entry>
                 <entry>
-                  <string>inputAS</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>quietMode</string>
-                  <boolean>false</boolean>
+                  <string>annType</string>
+                  <string>person</string>
                 </entry>
               </localMap>
             </runtimeParams>
@@ -1570,14 +1670,6 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
-                  <string>outputASName</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>document</string>
-                  <null/>
-                </entry>
-                <entry>
                   <string>corpus</string>
                   <null/>
                 </entry>
@@ -1594,7 +1686,15 @@
                   </gate.util.persistence.MapPersistence>
                 </entry>
                 <entry>
+                  <string>outputASName</string>
+                  <null/>
+                </entry>
+                <entry>
                   <string>inputASName</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>document</string>
                   <null/>
                 </entry>
               </localMap>
@@ -1631,7 +1731,19 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
+                  <string>labelFeature</string>
+                  <string>label</string>
+                </entry>
+                <entry>
+                  <string>commandLineParams</string>
+                  <string>-s 4 -c 1 -t 0 -m 1024</string>
+                </entry>
+                <entry>
                   <string>document</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>inputAS</string>
                   <null/>
                 </entry>
                 <entry>
@@ -1639,28 +1751,16 @@
                   <null/>
                 </entry>
                 <entry>
-                  <string>commandLineParams</string>
-                  <string>-s 4 -c 1 -t 0 -m 1024</string>
-                </entry>
-                <entry>
-                  <string>annType</string>
-                  <string>person</string>
-                </entry>
-                <entry>
-                  <string>labelFeature</string>
-                  <string>label</string>
+                  <string>quietMode</string>
+                  <boolean>false</boolean>
                 </entry>
                 <entry>
                   <string>scoresFeature</string>
                   <string>scores</string>
                 </entry>
                 <entry>
-                  <string>inputAS</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>quietMode</string>
-                  <boolean>false</boolean>
+                  <string>annType</string>
+                  <string>person</string>
                 </entry>
               </localMap>
             </runtimeParams>
@@ -1696,14 +1796,6 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
-                  <string>outputASName</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>document</string>
-                  <null/>
-                </entry>
-                <entry>
                   <string>corpus</string>
                   <null/>
                 </entry>
@@ -1720,7 +1812,15 @@
                   </gate.util.persistence.MapPersistence>
                 </entry>
                 <entry>
+                  <string>outputASName</string>
+                  <null/>
+                </entry>
+                <entry>
                   <string>inputASName</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>document</string>
                   <null/>
                 </entry>
               </localMap>
@@ -1757,7 +1857,19 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
+                  <string>labelFeature</string>
+                  <string>label</string>
+                </entry>
+                <entry>
+                  <string>commandLineParams</string>
+                  <string>-s 4 -c 1 -t 0 -m 1024</string>
+                </entry>
+                <entry>
                   <string>document</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>inputAS</string>
                   <null/>
                 </entry>
                 <entry>
@@ -1765,28 +1877,16 @@
                   <null/>
                 </entry>
                 <entry>
-                  <string>commandLineParams</string>
-                  <string>-s 4 -c 1 -t 0 -m 1024</string>
-                </entry>
-                <entry>
-                  <string>annType</string>
-                  <string>person</string>
-                </entry>
-                <entry>
-                  <string>labelFeature</string>
-                  <string>label</string>
+                  <string>quietMode</string>
+                  <boolean>false</boolean>
                 </entry>
                 <entry>
                   <string>scoresFeature</string>
                   <string>scores</string>
                 </entry>
                 <entry>
-                  <string>inputAS</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>quietMode</string>
-                  <boolean>false</boolean>
+                  <string>annType</string>
+                  <string>person</string>
                 </entry>
               </localMap>
             </runtimeParams>
@@ -1822,14 +1922,6 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
-                  <string>outputASName</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>document</string>
-                  <null/>
-                </entry>
-                <entry>
                   <string>corpus</string>
                   <null/>
                 </entry>
@@ -1846,7 +1938,15 @@
                   </gate.util.persistence.MapPersistence>
                 </entry>
                 <entry>
+                  <string>outputASName</string>
+                  <null/>
+                </entry>
+                <entry>
                   <string>inputASName</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>document</string>
                   <null/>
                 </entry>
               </localMap>
@@ -1883,7 +1983,19 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
+                  <string>labelFeature</string>
+                  <string>label</string>
+                </entry>
+                <entry>
+                  <string>commandLineParams</string>
+                  <string>-s 4 -c 1 -t 0 -m 1024</string>
+                </entry>
+                <entry>
                   <string>document</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>inputAS</string>
                   <null/>
                 </entry>
                 <entry>
@@ -1891,28 +2003,16 @@
                   <null/>
                 </entry>
                 <entry>
-                  <string>commandLineParams</string>
-                  <string>-s 4 -c 1 -t 0 -m 1024</string>
-                </entry>
-                <entry>
-                  <string>annType</string>
-                  <string>person</string>
-                </entry>
-                <entry>
-                  <string>labelFeature</string>
-                  <string>label</string>
+                  <string>quietMode</string>
+                  <boolean>false</boolean>
                 </entry>
                 <entry>
                   <string>scoresFeature</string>
                   <string>scores</string>
                 </entry>
                 <entry>
-                  <string>inputAS</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>quietMode</string>
-                  <boolean>false</boolean>
+                  <string>annType</string>
+                  <string>person</string>
                 </entry>
               </localMap>
             </runtimeParams>
