@@ -3,6 +3,6 @@ inputAS["person"].each { sn ->
 	
 	if (lang != "english" && lang != "italian" &&
  			lang != "dutch" && lang != "spanish") {
-		doc.features["lang"] = "other"
+		doc.features["lang"] = "english"
 	}
 }
