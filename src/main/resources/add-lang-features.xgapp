@@ -14,21 +14,6 @@
         <urlString>$relpath$plugins/libsvm-pr/</urlString>
       </gate.util.persistence.PersistenceManager-URLHolder>
       <gate.util.persistence.PersistenceManager-URLHolder>
-        <urlString>$gatehome$plugins/ANNIE/</urlString>
-      </gate.util.persistence.PersistenceManager-URLHolder>
-      <gate.util.persistence.PersistenceManager-URLHolder>
-        <urlString>$gatehome$plugins/Groovy/</urlString>
-      </gate.util.persistence.PersistenceManager-URLHolder>
-      <gate.util.persistence.PersistenceManager-URLHolder>
-        <urlString>$gatehome$plugins/Tools/</urlString>
-      </gate.util.persistence.PersistenceManager-URLHolder>
-      <gate.util.persistence.PersistenceManager-URLHolder>
-        <urlString>$gatehome$plugins/Language_Identification/</urlString>
-      </gate.util.persistence.PersistenceManager-URLHolder>
-      <gate.util.persistence.PersistenceManager-URLHolder>
-        <urlString>$gatehome$plugins/OpenNLP/</urlString>
-      </gate.util.persistence.PersistenceManager-URLHolder>
-      <gate.util.persistence.PersistenceManager-URLHolder>
         <urlString>$relpath$plugins/OpenNLP/</urlString>
       </gate.util.persistence.PersistenceManager-URLHolder>
       <gate.util.persistence.PersistenceManager-URLHolder>
@@ -42,18 +27,12 @@
       <localList>
         <gate.util.persistence.AnalyserRunningStrategyPersistence>
           <runMode>1</runMode>
-          <featureName></featureName>
-          <featureValue></featureValue>
           <pr class="gate.util.persistence.LanguageAnalyserPersistence">
             <runtimeParams class="gate.util.persistence.MapPersistence">
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
-                  <string>annotationSetName</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>annotationType</string>
+                  <string>document</string>
                   <null/>
                 </entry>
                 <entry>
@@ -61,11 +40,15 @@
                   <null/>
                 </entry>
                 <entry>
+                  <string>annotationSetName</string>
+                  <null/>
+                </entry>
+                <entry>
                   <string>languageFeatureName</string>
                   <string>lang</string>
                 </entry>
                 <entry>
-                  <string>document</string>
+                  <string>annotationType</string>
                   <null/>
                 </entry>
               </localMap>
@@ -79,60 +62,6 @@
                   <string>configURL</string>
                   <gate.util.persistence.PersistenceManager-URLHolder>
                     <urlString>$gatehome$plugins/Language_Identification/resources/default-names.conf</urlString>
-                  </gate.util.persistence.PersistenceManager-URLHolder>
-                </entry>
-              </localMap>
-            </initParams>
-            <features class="gate.util.persistence.MapPersistence">
-              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-              <localMap/>
-            </features>
-          </pr>
-        </gate.util.persistence.AnalyserRunningStrategyPersistence>
-        <gate.util.persistence.AnalyserRunningStrategyPersistence>
-          <runMode>1</runMode>
-          <pr class="gate.util.persistence.PRPersistence">
-            <runtimeParams class="gate.util.persistence.MapPersistence">
-              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-              <localMap>
-                <entry>
-                  <string>corpus</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>scriptParams</string>
-                  <gate.util.persistence.MapPersistence>
-                    <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-                    <localMap/>
-                  </gate.util.persistence.MapPersistence>
-                </entry>
-                <entry>
-                  <string>outputASName</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>inputASName</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>document</string>
-                  <null/>
-                </entry>
-              </localMap>
-            </runtimeParams>
-            <resourceType>gate.groovy.ScriptPR</resourceType>
-            <resourceName>Language Validation</resourceName>
-            <initParams class="gate.util.persistence.MapPersistence">
-              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-              <localMap>
-                <entry>
-                  <string>encoding</string>
-                  <string>UTF-8</string>
-                </entry>
-                <entry>
-                  <string>scriptURL</string>
-                  <gate.util.persistence.PersistenceManager-URLHolder>
-                    <urlString>$relpath$groovy/language-validation.groovy</urlString>
                   </gate.util.persistence.PersistenceManager-URLHolder>
                 </entry>
               </localMap>
@@ -163,11 +92,11 @@
                           <null/>
                         </entry>
                         <entry>
-                          <string>corpus</string>
+                          <string>document</string>
                           <null/>
                         </entry>
                         <entry>
-                          <string>document</string>
+                          <string>corpus</string>
                           <null/>
                         </entry>
                       </localMap>
@@ -178,14 +107,14 @@
                       <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                       <localMap>
                         <entry>
+                          <string>encoding</string>
+                          <string>UTF-8</string>
+                        </entry>
+                        <entry>
                           <string>tokeniserRulesURL</string>
                           <gate.util.persistence.PersistenceManager-URLHolder>
                             <urlString>$gatehome$plugins/ANNIE/resources/tokeniser/DefaultTokeniser.rules</urlString>
                           </gate.util.persistence.PersistenceManager-URLHolder>
-                        </entry>
-                        <entry>
-                          <string>encoding</string>
-                          <string>UTF-8</string>
                         </entry>
                         <entry>
                           <string>transducerGrammarURL</string>
@@ -203,8 +132,6 @@
                 </gate.util.persistence.AnalyserRunningStrategyPersistence>
                 <gate.util.persistence.AnalyserRunningStrategyPersistence>
                   <runMode>1</runMode>
-                  <featureName></featureName>
-                  <featureValue></featureValue>
                   <pr class="gate.util.persistence.LanguageAnalyserPersistence">
                     <runtimeParams class="gate.util.persistence.MapPersistence">
                       <mapType>gate.util.SimpleFeatureMapImpl</mapType>
@@ -214,11 +141,11 @@
                           <null/>
                         </entry>
                         <entry>
-                          <string>corpus</string>
+                          <string>document</string>
                           <null/>
                         </entry>
                         <entry>
-                          <string>document</string>
+                          <string>corpus</string>
                           <null/>
                         </entry>
                       </localMap>
@@ -229,10 +156,8 @@
                       <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                       <localMap>
                         <entry>
-                          <string>nonSplitListURL</string>
-                          <gate.util.persistence.PersistenceManager-URLHolder>
-                            <urlString>$relpath$plugins/ANNIE/resources/regex-splitter/non-split-patterns.txt</urlString>
-                          </gate.util.persistence.PersistenceManager-URLHolder>
+                          <string>encoding</string>
+                          <string>UTF-8</string>
                         </entry>
                         <entry>
                           <string>externalSplitListURL</string>
@@ -241,14 +166,16 @@
                           </gate.util.persistence.PersistenceManager-URLHolder>
                         </entry>
                         <entry>
+                          <string>nonSplitListURL</string>
+                          <gate.util.persistence.PersistenceManager-URLHolder>
+                            <urlString>$relpath$plugins/ANNIE/resources/regex-splitter/non-split-patterns.txt</urlString>
+                          </gate.util.persistence.PersistenceManager-URLHolder>
+                        </entry>
+                        <entry>
                           <string>internalSplitListURL</string>
                           <gate.util.persistence.PersistenceManager-URLHolder>
                             <urlString>$relpath$plugins/ANNIE/resources/regex-splitter/internal-split-patterns.txt</urlString>
                           </gate.util.persistence.PersistenceManager-URLHolder>
-                        </entry>
-                        <entry>
-                          <string>encoding</string>
-                          <string>UTF-8</string>
                         </entry>
                       </localMap>
                     </initParams>
@@ -267,20 +194,20 @@
                       <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                       <localMap>
                         <entry>
-                          <string>corpus</string>
-                          <null/>
-                        </entry>
-                        <entry>
                           <string>outputASName</string>
-                          <string></string>
-                        </entry>
-                        <entry>
-                          <string>inputASName</string>
                           <string></string>
                         </entry>
                         <entry>
                           <string>document</string>
                           <null/>
+                        </entry>
+                        <entry>
+                          <string>corpus</string>
+                          <null/>
+                        </entry>
+                        <entry>
+                          <string>inputASName</string>
+                          <string></string>
                         </entry>
                       </localMap>
                     </runtimeParams>
@@ -304,7 +231,7 @@
                   </pr>
                 </gate.util.persistence.AnalyserRunningStrategyPersistence>
                 <gate.util.persistence.AnalyserRunningStrategyPersistence>
-                  <runMode>1</runMode>
+                  <runMode>2</runMode>
                   <featureName></featureName>
                   <featureValue></featureValue>
                   <pr class="gate.util.persistence.LanguageAnalyserPersistence">
@@ -312,15 +239,15 @@
                       <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                       <localMap>
                         <entry>
-                          <string>enableDebugging</string>
-                          <boolean>false</boolean>
-                        </entry>
-                        <entry>
-                          <string>corpus</string>
+                          <string>outputASName</string>
                           <null/>
                         </entry>
                         <entry>
-                          <string>outputASName</string>
+                          <string>document</string>
+                          <null/>
+                        </entry>
+                        <entry>
+                          <string>corpus</string>
                           <null/>
                         </entry>
                         <entry>
@@ -328,8 +255,8 @@
                           <null/>
                         </entry>
                         <entry>
-                          <string>document</string>
-                          <null/>
+                          <string>enableDebugging</string>
+                          <boolean>false</boolean>
                         </entry>
                       </localMap>
                     </runtimeParams>
@@ -339,7 +266,15 @@
                       <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                       <localMap>
                         <entry>
+                          <string>encoding</string>
+                          <string>UTF-8</string>
+                        </entry>
+                        <entry>
                           <string>annotationAccessors</string>
+                          <null/>
+                        </entry>
+                        <entry>
+                          <string>operators</string>
                           <null/>
                         </entry>
                         <entry>
@@ -347,14 +282,6 @@
                           <gate.util.persistence.PersistenceManager-URLHolder>
                             <urlString>$gatehome$plugins/ANNIE/resources/NE/main.jape</urlString>
                           </gate.util.persistence.PersistenceManager-URLHolder>
-                        </entry>
-                        <entry>
-                          <string>encoding</string>
-                          <string>UTF-8</string>
-                        </entry>
-                        <entry>
-                          <string>operators</string>
-                          <null/>
                         </entry>
                       </localMap>
                     </initParams>
@@ -365,26 +292,28 @@
                   </pr>
                 </gate.util.persistence.AnalyserRunningStrategyPersistence>
                 <gate.util.persistence.AnalyserRunningStrategyPersistence>
-                  <runMode>1</runMode>
+                  <runMode>2</runMode>
+                  <featureName></featureName>
+                  <featureValue></featureValue>
                   <pr class="gate.util.persistence.LanguageAnalyserPersistence">
                     <runtimeParams class="gate.util.persistence.MapPersistence">
                       <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                       <localMap>
                         <entry>
-                          <string>corpus</string>
-                          <null/>
-                        </entry>
-                        <entry>
                           <string>outputASName</string>
-                          <string></string>
-                        </entry>
-                        <entry>
-                          <string>inputASName</string>
                           <string></string>
                         </entry>
                         <entry>
                           <string>document</string>
                           <null/>
+                        </entry>
+                        <entry>
+                          <string>corpus</string>
+                          <null/>
+                        </entry>
+                        <entry>
+                          <string>inputASName</string>
+                          <string></string>
                         </entry>
                       </localMap>
                     </runtimeParams>
@@ -452,11 +381,11 @@
                           <string></string>
                         </entry>
                         <entry>
-                          <string>corpus</string>
+                          <string>document</string>
                           <null/>
                         </entry>
                         <entry>
-                          <string>document</string>
+                          <string>corpus</string>
                           <null/>
                         </entry>
                       </localMap>
@@ -482,44 +411,7 @@
                 </gate.util.persistence.AnalyserRunningStrategyPersistence>
                 <gate.util.persistence.AnalyserRunningStrategyPersistence>
                   <runMode>1</runMode>
-                  <featureName></featureName>
-                  <featureValue></featureValue>
-                  <pr class="gate.util.persistence.LanguageAnalyserPersistence">
-                    <runtimeParams class="gate.util.persistence.MapPersistence">
-                      <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-                      <localMap>
-                        <entry>
-                          <string>annotationSetName</string>
-                          <string></string>
-                        </entry>
-                        <entry>
-                          <string>corpus</string>
-                          <null/>
-                        </entry>
-                        <entry>
-                          <string>document</string>
-                          <null/>
-                        </entry>
-                      </localMap>
-                    </runtimeParams>
-                    <resourceType>gate.opennlp.OpenNlpSentenceSplit</resourceType>
-                    <resourceName>Dutch-Sentence Splitter</resourceName>
-                    <initParams class="gate.util.persistence.MapPersistence">
-                      <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-                      <localMap>
-                        <entry>
-                          <string>model</string>
-                          <gate.util.persistence.PersistenceManager-URLHolder>
-                            <urlString>$relpath$plugins/OpenNLP/models/dutch/nl-sent.bin</urlString>
-                          </gate.util.persistence.PersistenceManager-URLHolder>
-                        </entry>
-                      </localMap>
-                    </initParams>
-                    <features class="gate.util.persistence.MapPersistence">
-                      <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-                      <localMap/>
-                    </features>
-                  </pr>
+                  <pr class="gate.util.persistence.LanguageAnalyserPersistence" reference="../../../../../../gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr/strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr"/>
                 </gate.util.persistence.AnalyserRunningStrategyPersistence>
                 <gate.util.persistence.AnalyserRunningStrategyPersistence>
                   <runMode>1</runMode>
@@ -530,20 +422,20 @@
                       <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                       <localMap>
                         <entry>
-                          <string>corpus</string>
-                          <null/>
-                        </entry>
-                        <entry>
                           <string>outputASName</string>
-                          <string></string>
-                        </entry>
-                        <entry>
-                          <string>inputASName</string>
                           <string></string>
                         </entry>
                         <entry>
                           <string>document</string>
                           <null/>
+                        </entry>
+                        <entry>
+                          <string>corpus</string>
+                          <null/>
+                        </entry>
+                        <entry>
+                          <string>inputASName</string>
+                          <string></string>
                         </entry>
                       </localMap>
                     </runtimeParams>
@@ -575,20 +467,20 @@
                       <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                       <localMap>
                         <entry>
-                          <string>corpus</string>
-                          <null/>
-                        </entry>
-                        <entry>
                           <string>outputASName</string>
-                          <string></string>
-                        </entry>
-                        <entry>
-                          <string>inputASName</string>
                           <string></string>
                         </entry>
                         <entry>
                           <string>document</string>
                           <null/>
+                        </entry>
+                        <entry>
+                          <string>corpus</string>
+                          <null/>
+                        </entry>
+                        <entry>
+                          <string>inputASName</string>
+                          <string></string>
                         </entry>
                       </localMap>
                     </runtimeParams>
@@ -617,7 +509,7 @@
             <prList class="gate.util.persistence.CollectionPersistence">
               <localList>
                 <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence/pr"/>
-                <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr"/>
+                <gate.util.persistence.LanguageAnalyserPersistence reference="../../../../../gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr/strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr"/>
                 <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[3]/pr"/>
                 <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[4]/pr"/>
               </localList>
@@ -655,11 +547,11 @@
                           <string></string>
                         </entry>
                         <entry>
-                          <string>corpus</string>
+                          <string>document</string>
                           <null/>
                         </entry>
                         <entry>
-                          <string>document</string>
+                          <string>corpus</string>
                           <null/>
                         </entry>
                       </localMap>
@@ -685,42 +577,7 @@
                 </gate.util.persistence.AnalyserRunningStrategyPersistence>
                 <gate.util.persistence.AnalyserRunningStrategyPersistence>
                   <runMode>1</runMode>
-                  <pr class="gate.util.persistence.LanguageAnalyserPersistence">
-                    <runtimeParams class="gate.util.persistence.MapPersistence">
-                      <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-                      <localMap>
-                        <entry>
-                          <string>annotationSetName</string>
-                          <string></string>
-                        </entry>
-                        <entry>
-                          <string>corpus</string>
-                          <null/>
-                        </entry>
-                        <entry>
-                          <string>document</string>
-                          <null/>
-                        </entry>
-                      </localMap>
-                    </runtimeParams>
-                    <resourceType>gate.opennlp.OpenNlpSentenceSplit</resourceType>
-                    <resourceName>Italian-Sentence Splitter</resourceName>
-                    <initParams class="gate.util.persistence.MapPersistence">
-                      <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-                      <localMap>
-                        <entry>
-                          <string>model</string>
-                          <gate.util.persistence.PersistenceManager-URLHolder>
-                            <urlString>$relpath$plugins/OpenNLP/models/italian/it-sent.bin</urlString>
-                          </gate.util.persistence.PersistenceManager-URLHolder>
-                        </entry>
-                      </localMap>
-                    </initParams>
-                    <features class="gate.util.persistence.MapPersistence">
-                      <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-                      <localMap/>
-                    </features>
-                  </pr>
+                  <pr class="gate.util.persistence.LanguageAnalyserPersistence" reference="../../../../../../gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr/strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr"/>
                 </gate.util.persistence.AnalyserRunningStrategyPersistence>
                 <gate.util.persistence.AnalyserRunningStrategyPersistence>
                   <runMode>1</runMode>
@@ -729,20 +586,20 @@
                       <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                       <localMap>
                         <entry>
-                          <string>corpus</string>
-                          <null/>
-                        </entry>
-                        <entry>
                           <string>outputASName</string>
-                          <string></string>
-                        </entry>
-                        <entry>
-                          <string>inputASName</string>
                           <string></string>
                         </entry>
                         <entry>
                           <string>document</string>
                           <null/>
+                        </entry>
+                        <entry>
+                          <string>corpus</string>
+                          <null/>
+                        </entry>
+                        <entry>
+                          <string>inputASName</string>
+                          <string></string>
                         </entry>
                       </localMap>
                     </runtimeParams>
@@ -771,7 +628,7 @@
             <prList class="gate.util.persistence.CollectionPersistence">
               <localList>
                 <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence/pr"/>
-                <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr"/>
+                <gate.util.persistence.LanguageAnalyserPersistence reference="../../../../../gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr/strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr"/>
                 <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[3]/pr"/>
               </localList>
               <collectionType>java.util.ArrayList</collectionType>
@@ -808,11 +665,11 @@
                           <null/>
                         </entry>
                         <entry>
-                          <string>corpus</string>
+                          <string>document</string>
                           <null/>
                         </entry>
                         <entry>
-                          <string>document</string>
+                          <string>corpus</string>
                           <null/>
                         </entry>
                       </localMap>
@@ -842,9 +699,7 @@
                 </gate.util.persistence.AnalyserRunningStrategyPersistence>
                 <gate.util.persistence.AnalyserRunningStrategyPersistence>
                   <runMode>1</runMode>
-                  <featureName></featureName>
-                  <featureValue></featureValue>
-                  <pr class="gate.util.persistence.LanguageAnalyserPersistence" reference="../../../../../../gate.util.persistence.AnalyserRunningStrategyPersistence[3]/pr/strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr"/>
+                  <pr class="gate.util.persistence.LanguageAnalyserPersistence" reference="../../../../../../gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr/strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr"/>
                 </gate.util.persistence.AnalyserRunningStrategyPersistence>
                 <gate.util.persistence.AnalyserRunningStrategyPersistence>
                   <runMode>1</runMode>
@@ -855,20 +710,20 @@
                       <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                       <localMap>
                         <entry>
-                          <string>corpus</string>
-                          <null/>
-                        </entry>
-                        <entry>
                           <string>outputASName</string>
-                          <string></string>
-                        </entry>
-                        <entry>
-                          <string>inputASName</string>
                           <string></string>
                         </entry>
                         <entry>
                           <string>document</string>
                           <null/>
+                        </entry>
+                        <entry>
+                          <string>corpus</string>
+                          <null/>
+                        </entry>
+                        <entry>
+                          <string>inputASName</string>
+                          <string></string>
                         </entry>
                       </localMap>
                     </runtimeParams>
@@ -900,20 +755,20 @@
                       <mapType>gate.util.SimpleFeatureMapImpl</mapType>
                       <localMap>
                         <entry>
-                          <string>corpus</string>
-                          <null/>
-                        </entry>
-                        <entry>
                           <string>outputASName</string>
-                          <string></string>
-                        </entry>
-                        <entry>
-                          <string>inputASName</string>
                           <string></string>
                         </entry>
                         <entry>
                           <string>document</string>
                           <null/>
+                        </entry>
+                        <entry>
+                          <string>corpus</string>
+                          <null/>
+                        </entry>
+                        <entry>
+                          <string>inputASName</string>
+                          <string></string>
                         </entry>
                       </localMap>
                     </runtimeParams>
@@ -942,7 +797,7 @@
             <prList class="gate.util.persistence.CollectionPersistence">
               <localList>
                 <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence/pr"/>
-                <gate.util.persistence.LanguageAnalyserPersistence reference="../../../../../gate.util.persistence.AnalyserRunningStrategyPersistence[3]/pr/strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr"/>
+                <gate.util.persistence.LanguageAnalyserPersistence reference="../../../../../gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr/strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr"/>
                 <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[3]/pr"/>
                 <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[4]/pr"/>
               </localList>
@@ -961,61 +816,6 @@
           </pr>
         </gate.util.persistence.AnalyserRunningStrategyPersistence>
         <gate.util.persistence.AnalyserRunningStrategyPersistence>
-          <runMode>4</runMode>
-          <featureName>lang</featureName>
-          <featureValue>other</featureValue>
-          <pr class="gate.util.persistence.ConditionalSerialAnalyserControllerPersistence">
-            <corpus class="gate.util.persistence.CorpusPersistence">
-              <dsData class="gate.util.persistence.DSPersistence">
-                <className>gate.persist.SerialDataStore</className>
-                <storageUrlString>file:/home/momchil/Desktop/TextMining/data/</storageUrlString>
-                <storageUrl class="gate.util.persistence.PersistenceManager$URLHolder">
-                  <urlString>$relpath$../../../../../data/</urlString>
-                </storageUrl>
-              </dsData>
-              <persistenceID class="string">en-test___1428999862228___2604</persistenceID>
-              <resourceType>gate.corpora.SerialCorpusImpl</resourceType>
-              <resourceName>en-test</resourceName>
-              <initParams class="gate.util.persistence.MapPersistence">
-                <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-                <localMap/>
-              </initParams>
-            </corpus>
-            <strategiesList class="gate.util.persistence.CollectionPersistence">
-              <localList>
-                <gate.util.persistence.AnalyserRunningStrategyPersistence>
-                  <runMode>1</runMode>
-                  <featureName></featureName>
-                  <featureValue></featureValue>
-                  <pr class="gate.util.persistence.LanguageAnalyserPersistence" reference="../../../../../../gate.util.persistence.AnalyserRunningStrategyPersistence[6]/pr/strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence/pr"/>
-                </gate.util.persistence.AnalyserRunningStrategyPersistence>
-                <gate.util.persistence.AnalyserRunningStrategyPersistence>
-                  <runMode>1</runMode>
-                  <pr class="gate.util.persistence.LanguageAnalyserPersistence" reference="../../../../../../gate.util.persistence.AnalyserRunningStrategyPersistence[3]/pr/strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr"/>
-                </gate.util.persistence.AnalyserRunningStrategyPersistence>
-              </localList>
-              <collectionType>java.util.ArrayList</collectionType>
-            </strategiesList>
-            <prList class="gate.util.persistence.CollectionPersistence">
-              <localList>
-                <gate.util.persistence.LanguageAnalyserPersistence reference="../../../../../gate.util.persistence.AnalyserRunningStrategyPersistence[6]/pr/strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence/pr"/>
-                <gate.util.persistence.LanguageAnalyserPersistence reference="../../../../../gate.util.persistence.AnalyserRunningStrategyPersistence[3]/pr/strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr"/>
-              </localList>
-              <collectionType>java.util.ArrayList</collectionType>
-            </prList>
-            <resourceType>gate.creole.ConditionalSerialAnalyserController</resourceType>
-            <resourceName>lang-other</resourceName>
-            <initParams class="gate.util.persistence.MapPersistence">
-              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-              <localMap/>
-            </initParams>
-            <features class="gate.util.persistence.MapPersistence">
-              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-              <localMap/>
-            </features>
-          </pr>
-        </gate.util.persistence.AnalyserRunningStrategyPersistence>
-        <gate.util.persistence.AnalyserRunningStrategyPersistence>
           <runMode>1</runMode>
           <featureName></featureName>
           <featureValue></featureValue>
@@ -1024,19 +824,15 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
-                  <string>enableDebugging</string>
-                  <boolean>false</boolean>
-                </entry>
-                <entry>
-                  <string>corpus</string>
-                  <null/>
-                </entry>
-                <entry>
                   <string>outputASName</string>
                   <null/>
                 </entry>
                 <entry>
-                  <string>inputASName</string>
+                  <string>document</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>corpus</string>
                   <null/>
                 </entry>
                 <entry>
@@ -1044,8 +840,12 @@
                   <null/>
                 </entry>
                 <entry>
-                  <string>document</string>
+                  <string>inputASName</string>
                   <null/>
+                </entry>
+                <entry>
+                  <string>enableDebugging</string>
+                  <boolean>false</boolean>
                 </entry>
               </localMap>
             </runtimeParams>
@@ -1055,11 +855,15 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
-                  <string>binaryGrammarURL</string>
-                  <null/>
+                  <string>encoding</string>
+                  <string>UTF-8</string>
                 </entry>
                 <entry>
                   <string>annotationAccessors</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>operators</string>
                   <null/>
                 </entry>
                 <entry>
@@ -1069,11 +873,7 @@
                   </gate.util.persistence.PersistenceManager-URLHolder>
                 </entry>
                 <entry>
-                  <string>encoding</string>
-                  <string>UTF-8</string>
-                </entry>
-                <entry>
-                  <string>operators</string>
+                  <string>binaryGrammarURL</string>
                   <null/>
                 </entry>
               </localMap>
@@ -1093,19 +893,15 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
-                  <string>enableDebugging</string>
-                  <boolean>false</boolean>
-                </entry>
-                <entry>
-                  <string>corpus</string>
-                  <null/>
-                </entry>
-                <entry>
                   <string>outputASName</string>
                   <null/>
                 </entry>
                 <entry>
-                  <string>inputASName</string>
+                  <string>document</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>corpus</string>
                   <null/>
                 </entry>
                 <entry>
@@ -1113,8 +909,12 @@
                   <null/>
                 </entry>
                 <entry>
-                  <string>document</string>
+                  <string>inputASName</string>
                   <null/>
+                </entry>
+                <entry>
+                  <string>enableDebugging</string>
+                  <boolean>false</boolean>
                 </entry>
               </localMap>
             </runtimeParams>
@@ -1124,11 +924,15 @@
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
                 <entry>
-                  <string>binaryGrammarURL</string>
-                  <null/>
+                  <string>encoding</string>
+                  <string>UTF-8</string>
                 </entry>
                 <entry>
                   <string>annotationAccessors</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>operators</string>
                   <null/>
                 </entry>
                 <entry>
@@ -1138,11 +942,7 @@
                   </gate.util.persistence.PersistenceManager-URLHolder>
                 </entry>
                 <entry>
-                  <string>encoding</string>
-                  <string>UTF-8</string>
-                </entry>
-                <entry>
-                  <string>operators</string>
+                  <string>binaryGrammarURL</string>
                   <null/>
                 </entry>
               </localMap>
@@ -1159,14 +959,12 @@
     <prList class="gate.util.persistence.CollectionPersistence">
       <localList>
         <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence/pr"/>
-        <gate.util.persistence.PRPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr"/>
+        <gate.util.persistence.ConditionalSerialAnalyserControllerPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr"/>
         <gate.util.persistence.ConditionalSerialAnalyserControllerPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[3]/pr"/>
         <gate.util.persistence.ConditionalSerialAnalyserControllerPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[4]/pr"/>
         <gate.util.persistence.ConditionalSerialAnalyserControllerPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[5]/pr"/>
-        <gate.util.persistence.ConditionalSerialAnalyserControllerPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[6]/pr"/>
-        <gate.util.persistence.ConditionalSerialAnalyserControllerPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[7]/pr"/>
-        <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[8]/pr"/>
-        <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[9]/pr"/>
+        <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[6]/pr"/>
+        <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[7]/pr"/>
       </localList>
       <collectionType>java.util.ArrayList</collectionType>
     </prList>
