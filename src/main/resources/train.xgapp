@@ -47,22 +47,6 @@
     <collectionType>java.util.ArrayList</collectionType>
   </urlList>
   <application class="gate.util.persistence.ConditionalSerialAnalyserControllerPersistence">
-    <corpus class="gate.util.persistence.CorpusPersistence">
-      <dsData class="gate.util.persistence.DSPersistence">
-        <className>gate.persist.SerialDataStore</className>
-        <storageUrlString>file:/home/momchil/Desktop/TextMining/data/</storageUrlString>
-        <storageUrl class="gate.util.persistence.PersistenceManager$URLHolder">
-          <urlString>$relpath$../../../../../data/</urlString>
-        </storageUrl>
-      </dsData>
-      <persistenceID class="string">en-train___1428999862274___1639</persistenceID>
-      <resourceType>gate.corpora.SerialCorpusImpl</resourceType>
-      <resourceName>en-train</resourceName>
-      <initParams class="gate.util.persistence.MapPersistence">
-        <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-        <localMap/>
-      </initParams>
-    </corpus>
     <strategiesList class="gate.util.persistence.CollectionPersistence">
       <localList>
         <gate.util.persistence.AnalyserRunningStrategyPersistence>
@@ -181,7 +165,6 @@
           <featureName></featureName>
           <featureValue></featureValue>
           <pr class="gate.util.persistence.ConditionalSerialAnalyserControllerPersistence">
-            <corpus class="gate.util.persistence.CorpusPersistence" reference="../../../../../corpus"/>
             <strategiesList class="gate.util.persistence.CollectionPersistence">
               <localList>
                 <gate.util.persistence.AnalyserRunningStrategyPersistence>
@@ -782,7 +765,7 @@
                   <featureName>lang</featureName>
                   <featureValue>italian</featureValue>
                   <pr class="gate.util.persistence.ConditionalSerialAnalyserControllerPersistence">
-                    <corpus class="gate.util.persistence.CorpusPersistence" reference="../../../../../../../../../corpus"/>
+                    
                     <strategiesList class="gate.util.persistence.CollectionPersistence">
                       <localList>
                         <gate.util.persistence.AnalyserRunningStrategyPersistence>
@@ -1348,7 +1331,7 @@
           <featureName></featureName>
           <featureValue></featureValue>
           <pr class="gate.util.persistence.LanguageAnalyserPersistence">
-            <corpus class="gate.util.persistence.CorpusPersistence" reference="../../../../../corpus"/>
+            
             <runtimeParams class="gate.util.persistence.MapPersistence">
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
               <localMap>
@@ -1367,10 +1350,6 @@
                 <entry>
                   <string>inputAS</string>
                   <null/>
-                </entry>
-                <entry>
-                  <string>corpus</string>
-                  <gate.util.persistence.CorpusPersistence reference="../../../../../../../../corpus"/>
                 </entry>
                 <entry>
                   <string>quietMode</string>
