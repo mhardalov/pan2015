@@ -43,7 +43,7 @@ inputAS["person"].each { sn ->
     }
 
     AnnotationSet foundUrls = doc.getAnnotations().get("Address");
-    AnnotationSet foundHashtags = doc.getAnnotations().get("Hashtag");
+    AnnotationSet foundHashtags = doc.getAnnotations().get("Hashtag");    
 		
 	//Pos tag features
     for(int i = 0; i < sortedToks.size(); ++i) {
@@ -65,6 +65,9 @@ inputAS["person"].each { sn ->
 			sn.features[fName] = sn.features[fName] + 1
 		}        
     }
+
+    sn.features["hashtags"] = (double)foundHashtags.size() / (double)sortedToks.size();
+    sn.features["urlLinks"] = (double)foundUrls.size() / (double)sortedToks.size();
     
 	lookups = inputAS.get("Lookup", sn.start(), sn.end());
 
