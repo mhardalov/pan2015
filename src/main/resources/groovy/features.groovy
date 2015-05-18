@@ -44,6 +44,8 @@ inputAS["person"].each { sn ->
 
     AnnotationSet foundUrls = doc.getAnnotations().get("Address");
     AnnotationSet foundHashtags = doc.getAnnotations().get("Hashtag");    
+
+    Map<String, Integer> posMap = new HashMap<String, Integer>();
 		
 	//Pos tag features
     for(int i = 0; i < sortedToks.size(); ++i) {
@@ -57,17 +59,36 @@ inputAS["person"].each { sn ->
 		}
 	
         String category = (String)token.getFeatures().get("category");
-				fName = "cat:" + category;
+		fName = "cat:" + category;
 
-        if(sn.features[fName] == null) {
-			sn.features[fName] = 1
+		Integer tagCount = posMap.get(fName);
+
+        if(tagCount == null) {
+			tagCount = 1
 		} else {
-			sn.features[fName] = sn.features[fName] + 1
-		}        
+			tagCount++;
+		}      
+
+		posMap.put(fName, tagCount);
+    }
+
+    for (java.util.Map.Entry<String, Integer> tag : posMap.entrySet()) {
+		sn.features[tag.getKey()] = (double) tag.getValue() / (double)sortedToks.size();
     }
 
     sn.features["hashtags"] = (double)foundHashtags.size() / (double)sortedToks.size();
     sn.features["urlLinks"] = (double)foundUrls.size() / (double)sortedToks.size();
+
+    AnnotationSet sentences = doc.getAnnotations().get("Sentence");
+
+    int sentLength = 0;
+    for (Annotation sentence : sentences) {
+    	sentLength += sentence.getEndNode().getOffset() - sentence.getStartNode().getOffset();
+    }
+
+	System.out.println("" + sentences.size());
+	System.out.println("" + sentLength);
+    sn.features["avgSentLength"] = Math.log((double) sentLength / sentences.size());
     
 	lookups = inputAS.get("Lookup", sn.start(), sn.end());
 
