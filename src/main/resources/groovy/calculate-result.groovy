@@ -1,12 +1,15 @@
-List<String> names = new ArrayList<String>();
-  names.add("o");
-	names.add("c");
-	names.add("e");
-	names.add("a");
-	names.add("s");
+// Calculates errors for each of the five traits : o, c, e, a, s
+// error is sum of square differences
+
+traits = new ArrayList<String>();
+  traits.add("o");
+	traits.add("c");
+	traits.add("e");
+	traits.add("a");
+	traits.add("s");
 	
 void beforeCorpus(c) {
-	// list of maps (one for each doc) class : score
+	// list of lists (one for each doc) with scores for each trait
 	gold = new ArrayList<List<Double>>();
 	guess = new ArrayList<List<Double>>();
 	docNum = 0
@@ -16,28 +19,21 @@ void beforeCorpus(c) {
 currGold = new ArrayList<Double>();
 currGuess = new ArrayList<Double>();
 
-FeatureMap pm = inputAS["person"].iterator().next().getFeatures();
-FeatureMap dm = doc.getFeatures();
-for(String name : names) {
-	println("gold " + name + ": " + pm[name])
-	println("guess " + name + ": " + dm[name])
-	currGold.add(pm[name]);
-	currGuess.add(dm[name]);
+// gold is in "person" annotations in GOLD AS
+FeatureMap goldMap = inputAS["person"].iterator().next().getFeatures();
+// guesses are set as document features (see script label-to-doc.groovy)
+FeatureMap guessMap = doc.getFeatures();
+for(String name : traits) {
+	println("gold " + name + ": " + goldMap[name])
+	println("guess " + name + ": " + guessMap[name])
+	currGold.add(goldMap[name]);
+	currGuess.add(guessMap[name]);
 }
-
 
 gold.add(currGold);
 guess.add(currGuess);
 
 void afterCorpus(c) {
-	
-	List<String> names = new ArrayList<String>();
-	names.add("o");
-	names.add("c");
-	names.add("e");
-	names.add("a");
-	names.add("s");
-	
 	List<Double> result = new ArrayList<Double>(5);
 	for(int i = 0; i < 5; ++i) {
 		result.add(0.0);
@@ -45,15 +41,15 @@ void afterCorpus(c) {
 	int docs = gold.size();
 	for(int i = 0; i < docs; ++i) {
 		for(int j = 0; j < 5; ++j) {
-			Double g = gold.get(i).get(j);
-			Double gu = guess.get(i).get(j);
-			double sq = (g - gu) * (g - gu);
+			Double goldValue = gold.get(i).get(j);
+			Double guessValue = guess.get(i).get(j);
+			double sq = Math.pow((goldValue - guessValue), 2);
 			double old = result.get(j);
 			result.set(j, old + sq / (double) docs);
 		}
 	}
 	
 	for(int j = 0; j < 5; ++j) {
-		println( names.get(j) + ": " + result.get(j));
+		println(traits.get(j) + ": " + result.get(j));
 	}
 }
