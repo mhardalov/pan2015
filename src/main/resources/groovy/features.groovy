@@ -19,7 +19,7 @@ inputAS["person"].each { sn ->
 	df["id"] = sf.remove("id");
 
 	// n-grams:
-    int minN = 1;
+    /*int minN = 1;
     int maxN = 2;
     String nGram;
     for (int n = minN; n <= maxN; n++) {
@@ -40,17 +40,31 @@ inputAS["person"].each { sn ->
 				sn.features[fName] = sn.features[fName] + 1
 			}
         }
-    }
+    }*/
 
     AnnotationSet foundUrls = doc.getAnnotations().get("Address");
     AnnotationSet foundHashtags = doc.getAnnotations().get("Hashtag");    
 
     Map<String, Integer> posMap = new HashMap<String, Integer>();
+    Map<String, Integer> caseMap = new HashMap<String, Integer>();
 		
 	//Pos tag features
     for(int i = 0; i < sortedToks.size(); ++i) {
     	Annotation token = sortedToks[i];
-		String kind = (String)token.getFeatures().get("kind");		
+		String kind = (String)token.getFeatures().get("kind");
+		String letterCase = (String)token.getFeatures().get("orth");
+
+		if (letterCase != null) {
+
+			//Couting the different letter cases for tokens in text
+			Integer letterCaseCount = caseMap.get(letterCase);		
+			if (letterCaseCount == null) {
+				letterCaseCount = 0;
+			}
+
+			letterCaseCount++;
+			caseMap.put(letterCase, letterCaseCount);
+		}
 
 		//We must skip it if it's not a word, it is an url, or hashtag.
 		if (kind != "word" || foundUrls.get(token.getStartNode().getOffset(), token.getEndNode().getOffset()).size() > 0 ||
@@ -74,6 +88,10 @@ inputAS["person"].each { sn ->
 
     for (java.util.Map.Entry<String, Integer> tag : posMap.entrySet()) {
 		sn.features[tag.getKey()] = (double) tag.getValue() / (double)sortedToks.size();
+    }
+
+    for (java.util.Map.Entry<String, Integer> letterCase : caseMap.entrySet()) {
+		sn.features[letterCase.getKey()] = (double) letterCase.getValue() / (double)sortedToks.size();
     }
 
     sn.features["hashtags"] = (double)foundHashtags.size() / (double)sortedToks.size();
