@@ -1,0 +1,482 @@
+<gate.util.persistence.GateApplication>
+  <urlList class="gate.util.persistence.CollectionPersistence">
+    <localList>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$relpath$plugins/ANNIE/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$relpath$plugins/Groovy/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$relpath$plugins/Tools/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$relpath$plugins/libsvm-pr/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$relpath$plugins/OpenNLP/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+      <gate.util.persistence.PersistenceManager-URLHolder>
+        <urlString>$relpath$plugins/Language_Identification/</urlString>
+      </gate.util.persistence.PersistenceManager-URLHolder>
+    </localList>
+    <collectionType>java.util.ArrayList</collectionType>
+  </urlList>
+  <application class="gate.util.persistence.ConditionalSerialAnalyserControllerPersistence">
+    <corpus class="gate.util.persistence.CorpusPersistence">
+      <docList>
+        <gate.util.persistence.LRPersistence>
+          <dsData class="gate.util.persistence.DSPersistence">
+            <className>gate.persist.SerialDataStore</className>
+            <storageUrlString>file:/home/momchil/Desktop/TextMining/data/english/</storageUrlString>
+            <storageUrl class="gate.util.persistence.PersistenceManager$URLHolder">
+              <urlString>$relpath$../../../../../data/english/</urlString>
+            </storageUrl>
+          </dsData>
+          <persistenceID class="string">user554___1428999862484___436</persistenceID>
+          <resourceType>gate.corpora.DocumentImpl</resourceType>
+          <resourceName>user554</resourceName>
+          <initParams class="gate.util.persistence.MapPersistence">
+            <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+            <localMap>
+              <entry>
+                <string>markupAware</string>
+                <boolean>true</boolean>
+              </entry>
+              <entry>
+                <string>stringContent</string>
+                <string>Windows 8: The Most Confused OS Launch Ever http://t.co/0EbvwBmN
+
+Where Hollywood And Tech Collide: Disney To Buy &apos;Star Wars&apos; Maker Lucasfilm For $4.05 Billion http://t.co/kETwAHks
+
+Fuck Leia is now a Disney princess :S http://t.co/kETwAHks
+
+&quot;The best you ever had, is just a memory and those dreams not as daft as they seem when u drem them up&quot; Arctic Monkeys http://goo.gl/nUd6
+
+@username Google Music es gratis :)
+
+@username siendo + profundo e interesante, se conecta cn lo más profundo e interesanto. isn&apos;t all the same but, out there, most is boring
+
+@username hay firefox?
+
+@username Joss Stone &quot;piracy is great&quot; http://t.co/W3Elbbiz
+
+Joss Stone &quot;piracy is great&quot;: http://t.co/URKQGHbZ #DaParaDarse
+
+Frank Sinatra - Francis Albert Sinatra &amp; Antonio Carlos Jobim (1967) 320kbps  http://goo.gl/NzcUb #musica #musthave
+
+LVK hacking meeting (@username St. Andrews) http://t.co/QuT2ga2P
+
+@username now habla de UX en HacksAndFounders cordoba
+
+@username checkout our #IOS game developed by @username, a local startup #cordoba https://t.co/H4O1B6em
+
+RT @username: iPhone Puzzler  Cut the Rope  Sells 1 Million Units In 10 Days http://www.gamasutra.com/view/news/30986/
+
+@username not yet, we have it in mind, but we are first migrating Julia  to Android
+
+@username if you can talk us about these tweaks it will be great!
+
+Android 4.2.1 is out ! We recover December !!! #bugfix #release @username
+
+Como me cague de risa con The Big Bang Theory - 04x04 - The Hot Troll Deviation!!
+
+@username cuack !
+
+How to play Rock, Paper, Scissors, Lizard, Spock http://t.co/4wM8iWSI
+
+This is Qt 5: http://t.co/xlAg3VPZ
+
+Just posted a photo http://t.co/sjPtclv7
+
+trying make me an android developer, any android developr in my timeline ?
+
+Support Luto por Nestor Kirchner, add a #twibbon to your avatar now! - http://twb.ly/bkhzE3
+
+I&apos;m at Antares w/ @username http://t.co/Ia7iJqgt
+
+I&apos;m at Aeroparque Jorge Newbery (AEP) (Ciudad de Buenos Aires, Buenos Aires) w/ 5 others http://t.co/6JIesYtk
+
+Néstor Kirchner: Argentina&apos;s independence hero http://www.guardian.co.uk/commentisfree/cifamerica/2010/oct/27/nestor-kirchner-argentina-imf
+
+I just unlocked the &quot;Zoetrope&quot; badge on @username for checking in to movie theaters! #FilmBuff http://t.co/FeOts9b7
+
+I&apos;m at Cinemark Palermo for The Hobbit: An Unexpected Journey in HFR 3D (Ciudad de Buenos Aires, Buenos Aires) http://t.co/XsuwG5Sa
+
+Muy fuerte las fotos The Big Picture: Argentina bids farewell to a president http://goo.gl/YQ18
+
+Using tcpdump http://t.co/lAU65gf2 via
+
+Suggesting a python book to an empirical learner after looking at his code http://t.co/XfFtgZie via
+
+When a new hire asks whether he should use git http://t.co/efYdWTWz
+
+I just unlocked the &quot;Swimmies&quot; badge on @username for checking in at water spots! Splish splash! http://t.co/PGpImyW8
+
+I&apos;m at St. Andrews (Córdoba) http://t.co/UE0Ubo1U
+
+I&apos;m at St. Andrews (Córdoba) http://t.co/kZ7S2Czr
+
+Check out Kurt Wenner&apos;s 3D chalk works from Mind Blowing 3D Sidewalk art! http://t.co/q4mtWdkr
+
+I have one of the top 5% most viewed @username profiles for 2012. http://t.co/LmGpQVrZ
+
+Check out Piano House An Hui Province, China from Crazy Architecture From Around the World http://t.co/7UanYl0Z
+
+Poncho : Take my hand https://t.co/17CmhtnA
+
+Check out this mix on @username: &quot;7O´s Soul Music For Dummies&quot; at ?  http://t.co/mwCE2JeTJ7
+
+@username check out our game &quot;Julia A pick Up Adventure&quot;  http://t.co/1m7X7xA4jp press pack http://t.co/04UuQEet17 http://t.co/cDXQn2qFgO
+
+@username check out our game &quot;Julia A pick Up Adventure&quot;  http://t.co/1m7X7xA4jp press pack http://t.co/04UuQEet17 http://t.co/GGbbiKL5y2
+
+@username check out our game &quot;Julia A pick Up Adventure&quot;http://t.co/1m7X7xA4jp  press pack http://t.co/04UuQEet17 http://t.co/QW9ylkMWVh
+
+I&apos;m at Bartola Corner (Capital Federal, Buenos Aires) w/ 2 others http://t.co/dKV8Dw3CP0
+
+I&apos;m at Oui Oui (Capital Federal, Buenos Aires) w/ 4 others http://t.co/0vuFrb9VJf
+
+@username I&apos;m exactly in that situation!! 5 am leaving home to take a flight !
+
+@username friends of who earn this U$D6 trillon?  there you have the lobbyist for the war
+
+@username checkout our game &quot;Julia A pick Up Adventure&quot;http://t.co/1m7X7xA4jp press pack http://t.co/04UuQEet17 http://t.co/g7smQERyE5
+
+I&apos;m at @username (Córdoba) w/ 2 others http://t.co/R8QOv7mhuP
+
+I&apos;m at Aeroparque Jorge Newbery (AEP) - @username (Ciudad de Buenos Aires, Buenos Aires) w/ 7 others http://t.co/iN7Xd77Dwo
+
+I&apos;m at Oui Oui (Capital Federal, Buenos Aires) w/ 3 others http://t.co/INZC9Q0IjO
+
+I&apos;m at Miranda (Buenos Aires, Argentina) w/ 5 others http://t.co/nw4TpMBzlB
+
+Daft Punk | Random Access Memories | The Collaborators: Giorgio Moroder: http://t.co/AfUjM3JiVy via @username
+
+I&apos;m at St. Andrews w/ @username http://t.co/cjae528jt5
+
+I&apos;m at Cafe Martinez (Córdoba) w/ 2 others http://t.co/2DK1NJusAq
+
+Gold Guns Girls [Official Music Video] - METRIC: http://t.co/AdzeTq2itw
+
+The xx - Crystalised: http://t.co/nA67k7Dd10
+
+@username bug: ask for recomendations the notice arrive the other person but sometims they click and cant access, w no mark requested 4me
+
+@username u r wellcome! discount codes as thanks for good bug reports make no harm ;)
+
+I&apos;m at Johnny B. Good w/ @username http://t.co/RrrecOBAqR
+
+@username Bug: When I&apos;m paying my stay in SF,CA from Argentina the amount is translated to € instead of keep it in U$D or trnslted to AR$
+
+@username ups u r IN the dark side my dear. I can help u
+
+Breakbot - Baby I&apos;m Yours feat. Irfane (Official Video): http://t.co/LkOOguCfnL
+
+I&apos;m at Dallas/Fort Worth International Airport (DFW) (DFW Airport, TX) w/ 49 others http://t.co/21XJFgolRp
+
+Flight delayed by flight control the same in all countries f***
+
+I&apos;m at Super Duper Burger - @username (San Francisco, CA) w/ 5 others http://t.co/DZ0UO5xTZB
+
+I&apos;m at @username &amp; Cafe (San Francisco, CA) http://t.co/PaJfw7qhu8
+
+I&apos;m at Little Baobab (San Francisco, CA) w/ 2 others http://t.co/MqG6WGBab4
+
+I&apos;m at Lush Lounge (San Francisco, CA) w/ 6 others http://t.co/QoLiWZzOBU
+
+I&apos;m at La Boulange (San Francisco, CA) http://t.co/jyvUKGkNAe
+
+I&apos;m at Yerba Buena Gardens for Asian Improv aRts 25 Anniversary: Traditions in Transformation [pic]: http://t.co/7Ze8T7v7hf
+
+I&apos;m at Pearl&apos;s Deluxe Burgers (San Francisco, CA) http://t.co/gtXWTZwQWo
+
+I&apos;m at The Marriot Hotel (Santa Clara, CA) http://t.co/HuwDRt3vTk
+
+GDG summit (@username Googleplex - @usernamegoogle w/ 24 others) [pic]: http://t.co/mcgSVFm6LO
+
+Breakfast (@username Googleplex - @usernamegoogle w/ 16 others) [pic]: http://t.co/REQQFiEL7F
+
+I&apos;m at Googleplex - Google Store (Mountain View, CA) w/ 8 others [pic]: http://t.co/7ZooPuEocR
+
+#io13 #googleio Beta testing &amp; staged Rollouts  alpha, betha testing groups and feedback percentage of rollout
+
+Larry Page answering questions of the people at #io13 #googleio
+
+Ignite is One of the coolest part of #io13  #google !!
+
+I&apos;m at Alchemist Bar &amp; Lounge (San Francisco, CA) w/ 9 others [pic]: http://t.co/5bqisbc3mj
+
+I&apos;m at Moscone West for Google I/O 2013 (San Francisco, CA) w/ 73 others [pic]: http://t.co/fUtsRRrrEc
+
+Just posted a photo http://t.co/wwhr6HuhaK
+
+I&apos;m at Starbucks (San Francisco, CA) w/ 3 others http://t.co/SrUtv2s4E4
+
+I&apos;m at Range (San Francisco, CA) http://t.co/opMVky0JCu
+
+I&apos;m at San Francisco International Airport (SFO) (San Francisco, CA) w/ 147 others http://t.co/1fc9lLZPJ9
+
+La internee&apos; en el avion, bastante bien anda: Check out my result from http://t.co/FQtqZsqqrL! http://t.co/2z50At2ygZ
+
+I&apos;m at Casa Enrique (Long Island City, NY) http://t.co/rgdFKIsd4x
+
+I&apos;m at Starbucks (New York, NY) http://t.co/HTVsJ8TP01
+
+I&apos;m at The Metropolitan Museum of Art - @username w/ @username [pic]: http://t.co/hHNgDgbjB8
+
+I&apos;m at @username (New York, NY) w/ 3 others [pic]: http://t.co/FDUrvf2IvY
+
+I&apos;m at Westville East - @username (New York, NY) w/ 7 others [pic]: http://t.co/bV1fUKlTyx
+
+I&apos;m at The Cooper Union (New York, NY) [pic]: http://t.co/AdZN1AdMdm
+
+I&apos;m at Pablo Picasso Statue (New York, NY) [pic]: http://t.co/1Er1q8IpKW
+
+Perks of traveling with girlfriend ;) (@username Victoria&apos;s Secret PINK - @usernamevspink w/ 2 others) [pic]: http://t.co/a024Yl3VPH
+
+I&apos;m at Takahachi (New York, NY) w/ 4 others [pic]: http://t.co/uQSsG9olDm
+
+I&apos;m at Museum Of Natural History Water Park (New York, NY) [pic]: http://t.co/aD0hDgqTgv
+
+I&apos;m at American Museum of Natural History - @username (New York, NY) w/ 32 others http://t.co/DH3qFuzosX
+
+I&apos;m at Magnolia Bakery (New York, NY) [pic]: http://t.co/HPdxkBs5TE
+
+I&apos;m at Lincoln Center Plaza (Josie Robertson Plaza) - @username (New York, NY) w/ 2 others http://t.co/TJ9IgrSQAJ
+
+</string>
+              </entry>
+              <entry>
+                <string>encoding</string>
+                <string>UTF-8</string>
+              </entry>
+              <entry>
+                <string>sourceUrlStartOffset</string>
+                <null/>
+              </entry>
+              <entry>
+                <string>preserveOriginalContent</string>
+                <boolean>false</boolean>
+              </entry>
+              <entry>
+                <string>collectRepositioningInfo</string>
+                <boolean>false</boolean>
+              </entry>
+              <entry>
+                <string>sourceUrl</string>
+                <null/>
+              </entry>
+              <entry>
+                <string>mimeType</string>
+                <null/>
+              </entry>
+              <entry>
+                <string>sourceUrlEndOffset</string>
+                <null/>
+              </entry>
+            </localMap>
+          </initParams>
+        </gate.util.persistence.LRPersistence>
+      </docList>
+      <resourceType>gate.corpora.CorpusImpl</resourceType>
+      <resourceName>Corpus for user554</resourceName>
+      <initParams class="gate.util.persistence.MapPersistence">
+        <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+        <localMap>
+          <entry>
+            <string>documentsList</string>
+            <null/>
+          </entry>
+        </localMap>
+      </initParams>
+    </corpus>
+    <strategiesList class="gate.util.persistence.CollectionPersistence">
+      <localList>
+        <gate.util.persistence.AnalyserRunningStrategyPersistence>
+          <runMode>1</runMode>
+          <featureName></featureName>
+          <featureValue></featureValue>
+          <pr class="gate.util.persistence.LanguageAnalyserPersistence">
+            <runtimeParams class="gate.util.persistence.MapPersistence">
+              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+              <localMap>
+                <entry>
+                  <string>wholeWordsOnly</string>
+                  <boolean>true</boolean>
+                </entry>
+                <entry>
+                  <string>longestMatchOnly</string>
+                  <boolean>true</boolean>
+                </entry>
+                <entry>
+                  <string>document</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>corpus</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>annotationSetName</string>
+                  <null/>
+                </entry>
+              </localMap>
+            </runtimeParams>
+            <resourceType>gate.creole.gazetteer.DefaultGazetteer</resourceType>
+            <resourceName>dict</resourceName>
+            <initParams class="gate.util.persistence.MapPersistence">
+              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+              <localMap>
+                <entry>
+                  <string>listsURL</string>
+                  <gate.util.persistence.PersistenceManager-URLHolder>
+                    <urlString>$relpath$dictionaries/lists.def</urlString>
+                  </gate.util.persistence.PersistenceManager-URLHolder>
+                </entry>
+                <entry>
+                  <string>caseSensitive</string>
+                  <boolean>false</boolean>
+                </entry>
+                <entry>
+                  <string>gazetteerFeatureSeparator</string>
+                  <string>,</string>
+                </entry>
+                <entry>
+                  <string>encoding</string>
+                  <string>UTF-8</string>
+                </entry>
+              </localMap>
+            </initParams>
+            <features class="gate.util.persistence.MapPersistence">
+              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+              <localMap/>
+            </features>
+          </pr>
+        </gate.util.persistence.AnalyserRunningStrategyPersistence>
+        <gate.util.persistence.AnalyserRunningStrategyPersistence>
+          <runMode>1</runMode>
+          <featureName></featureName>
+          <featureValue></featureValue>
+          <pr class="gate.util.persistence.LanguageAnalyserPersistence">
+            <runtimeParams class="gate.util.persistence.MapPersistence">
+              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+              <localMap>
+                <entry>
+                  <string>annotationSetName</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>document</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>corpus</string>
+                  <null/>
+                </entry>
+              </localMap>
+            </runtimeParams>
+            <resourceType>com.ontotext.gate.gazetteer.HashGazetteer</resourceType>
+            <resourceName>dict-case-sensitive</resourceName>
+            <initParams class="gate.util.persistence.MapPersistence">
+              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+              <localMap>
+                <entry>
+                  <string>encoding</string>
+                  <string>UTF-8</string>
+                </entry>
+                <entry>
+                  <string>listsURL</string>
+                  <gate.util.persistence.PersistenceManager-URLHolder>
+                    <urlString>$relpath$dictionaries/casesensitive-lists.def</urlString>
+                  </gate.util.persistence.PersistenceManager-URLHolder>
+                </entry>
+                <entry>
+                  <string>caseSensitive</string>
+                  <boolean>true</boolean>
+                </entry>
+              </localMap>
+            </initParams>
+            <features class="gate.util.persistence.MapPersistence">
+              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+              <localMap/>
+            </features>
+          </pr>
+        </gate.util.persistence.AnalyserRunningStrategyPersistence>
+        <gate.util.persistence.AnalyserRunningStrategyPersistence>
+          <runMode>1</runMode>
+          <pr class="gate.util.persistence.PRPersistence">
+            <runtimeParams class="gate.util.persistence.MapPersistence">
+              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+              <localMap>
+                <entry>
+                  <string>outputASName</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>document</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>corpus</string>
+                  <null/>
+                </entry>
+                <entry>
+                  <string>scriptParams</string>
+                  <gate.util.persistence.MapPersistence>
+                    <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+                    <localMap/>
+                  </gate.util.persistence.MapPersistence>
+                </entry>
+                <entry>
+                  <string>inputASName</string>
+                  <null/>
+                </entry>
+              </localMap>
+            </runtimeParams>
+            <resourceType>gate.groovy.ScriptPR</resourceType>
+            <resourceName>generate features</resourceName>
+            <initParams class="gate.util.persistence.MapPersistence">
+              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+              <localMap>
+                <entry>
+                  <string>encoding</string>
+                  <string>UTF-8</string>
+                </entry>
+                <entry>
+                  <string>scriptURL</string>
+                  <gate.util.persistence.PersistenceManager-URLHolder>
+                    <urlString>$relpath$groovy/features.groovy</urlString>
+                  </gate.util.persistence.PersistenceManager-URLHolder>
+                </entry>
+              </localMap>
+            </initParams>
+            <features class="gate.util.persistence.MapPersistence">
+              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+              <localMap/>
+            </features>
+          </pr>
+        </gate.util.persistence.AnalyserRunningStrategyPersistence>
+      </localList>
+      <collectionType>java.util.ArrayList</collectionType>
+    </strategiesList>
+    <prList class="gate.util.persistence.CollectionPersistence">
+      <localList>
+        <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence/pr"/>
+        <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr"/>
+        <gate.util.persistence.PRPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[3]/pr"/>
+      </localList>
+      <collectionType>java.util.ArrayList</collectionType>
+    </prList>
+    <resourceType>gate.creole.ConditionalSerialAnalyserController</resourceType>
+    <resourceName>add-nomen-features</resourceName>
+    <initParams class="gate.util.persistence.MapPersistence">
+      <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+      <localMap/>
+    </initParams>
+    <features class="gate.util.persistence.MapPersistence">
+      <mapType>gate.util.SimpleFeatureMapImpl</mapType>
+      <localMap/>
+    </features>
+  </application>
+</gate.util.persistence.GateApplication>
