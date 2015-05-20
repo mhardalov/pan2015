@@ -1,0 +1,12 @@
+Phase: picToAnnotations
+Input: Token
+Options: control = appelt
+
+Rule: hashtagsToAnnotations
+(
+	({Token.string == "["})
+	({Token.string == "pic"})
+	({Token.string == "]"})
+):Pictures
+-->
+:Pictures.Pictures = {rule = "picToAnnotations"}
