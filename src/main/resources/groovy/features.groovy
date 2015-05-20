@@ -46,7 +46,12 @@ inputAS["person"].each { sn ->
 
     AnnotationSet foundUrls = doc.getAnnotations().get("Address");
     AnnotationSet foundHashtags = doc.getAnnotations().get("Hashtag");
+<<<<<<< HEAD
     AnnotationSet foundPictures = doc.getAnnotations().get("Pictures");
+=======
+		AnnotationSet foundUserMetions = doc.getAnnotations().get("UserMention");
+
+>>>>>>> eb0f54da11cc23e06d92d28f58d4748080b0c696
 
     Map<String, Integer> posMap = new HashMap<String, Integer>();
     Map<String, Integer> caseMap = new HashMap<String, Integer>();
@@ -92,7 +97,7 @@ inputAS["person"].each { sn ->
     for (java.util.Map.Entry<String, Integer> tag : posMap.entrySet()) {
 		sn.features[tag.getKey()] = (double) tag.getValue() / (double)sortedToks.size();
     }
-
+    
     for (java.util.Map.Entry<String, Integer> letterCase : caseMap.entrySet()) {
 		sn.features[letterCase.getKey()] = (double) letterCase.getValue() / (double)sortedToks.size();
     }
@@ -100,7 +105,7 @@ inputAS["person"].each { sn ->
     sn.features["hashtags"] = (double)foundHashtags.size() / (double)tweets.size();
     sn.features["urlLinks"] = (double)foundUrls.size() / (double) tweets.size();
 	sn.features["pic_post"] = (double)foundPictures.size() / (double) tweets.size();
-
+	sn.features["userMantion"] = (double)foundUserMetions.size() / (double)tweets.size();
 
     AnnotationSet sentences = doc.getAnnotations().get("Sentence");
 
