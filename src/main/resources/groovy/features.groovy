@@ -46,12 +46,8 @@ inputAS["person"].each { sn ->
 
     AnnotationSet foundUrls = doc.getAnnotations().get("Address");
     AnnotationSet foundHashtags = doc.getAnnotations().get("Hashtag");
-<<<<<<< HEAD
     AnnotationSet foundPictures = doc.getAnnotations().get("Pictures");
-=======
-		AnnotationSet foundUserMetions = doc.getAnnotations().get("UserMention");
-
->>>>>>> eb0f54da11cc23e06d92d28f58d4748080b0c696
+	AnnotationSet foundUserMetions = doc.getAnnotations().get("UserMention");
 
     Map<String, Integer> posMap = new HashMap<String, Integer>();
     Map<String, Integer> caseMap = new HashMap<String, Integer>();
