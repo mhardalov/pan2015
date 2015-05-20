@@ -177,68 +177,7 @@
           </pr>
         </gate.util.persistence.AnalyserRunningStrategyPersistence>
         <gate.util.persistence.AnalyserRunningStrategyPersistence>
-          <runMode>2</runMode>
-          <featureName></featureName>
-          <featureValue></featureValue>
-          <pr class="gate.util.persistence.LanguageAnalyserPersistence">
-            <runtimeParams class="gate.util.persistence.MapPersistence">
-              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-              <localMap>
-                <entry>
-                  <string>outputASName</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>document</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>corpus</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>inputASName</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>enableDebugging</string>
-                  <boolean>false</boolean>
-                </entry>
-              </localMap>
-            </runtimeParams>
-            <resourceType>gate.creole.ANNIETransducer</resourceType>
-            <resourceName>English-NE-Transducer</resourceName>
-            <initParams class="gate.util.persistence.MapPersistence">
-              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-              <localMap>
-                <entry>
-                  <string>encoding</string>
-                  <string>UTF-8</string>
-                </entry>
-                <entry>
-                  <string>annotationAccessors</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>operators</string>
-                  <null/>
-                </entry>
-                <entry>
-                  <string>grammarURL</string>
-                  <gate.util.persistence.PersistenceManager-URLHolder>
-                    <urlString>$gatehome$plugins/ANNIE/resources/NE/main.jape</urlString>
-                  </gate.util.persistence.PersistenceManager-URLHolder>
-                </entry>
-              </localMap>
-            </initParams>
-            <features class="gate.util.persistence.MapPersistence">
-              <mapType>gate.util.SimpleFeatureMapImpl</mapType>
-              <localMap/>
-            </features>
-          </pr>
-        </gate.util.persistence.AnalyserRunningStrategyPersistence>
-        <gate.util.persistence.AnalyserRunningStrategyPersistence>
-          <runMode>2</runMode>
+          <runMode>1</runMode>
           <featureName></featureName>
           <featureValue></featureValue>
           <pr class="gate.util.persistence.LanguageAnalyserPersistence">
@@ -291,7 +230,6 @@
         <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[2]/pr"/>
         <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[3]/pr"/>
         <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[4]/pr"/>
-        <gate.util.persistence.LanguageAnalyserPersistence reference="../../../strategiesList/localList/gate.util.persistence.AnalyserRunningStrategyPersistence[5]/pr"/>
       </localList>
       <collectionType>java.util.ArrayList</collectionType>
     </prList>
