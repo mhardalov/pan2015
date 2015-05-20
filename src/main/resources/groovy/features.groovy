@@ -42,8 +42,11 @@ inputAS["person"].each { sn ->
         }
     }
 
+    AnnotationSet tweets = doc.getAnnotations("GOLD").get("tweet");    
+
     AnnotationSet foundUrls = doc.getAnnotations().get("Address");
-    AnnotationSet foundHashtags = doc.getAnnotations().get("Hashtag");    
+    AnnotationSet foundHashtags = doc.getAnnotations().get("Hashtag");
+    AnnotationSet foundPictures = doc.getAnnotations().get("Pictures");
 
     Map<String, Integer> posMap = new HashMap<String, Integer>();
     Map<String, Integer> caseMap = new HashMap<String, Integer>();
@@ -94,8 +97,10 @@ inputAS["person"].each { sn ->
 		sn.features[letterCase.getKey()] = (double) letterCase.getValue() / (double)sortedToks.size();
     }
 
-    sn.features["hashtags"] = (double)foundHashtags.size() / (double)sortedToks.size();
-    sn.features["urlLinks"] = (double)foundUrls.size() / (double)sortedToks.size();
+    sn.features["hashtags"] = (double)foundHashtags.size() / (double)tweets.size();
+    sn.features["urlLinks"] = (double)foundUrls.size() / (double) tweets.size();
+	sn.features["pic_post"] = (double)foundPictures.size() / (double) tweets.size();
+
 
     AnnotationSet sentences = doc.getAnnotations().get("Sentence");
 
@@ -103,10 +108,8 @@ inputAS["person"].each { sn ->
     for (Annotation sentence : sentences) {
     	sentLength += sentence.getEndNode().getOffset() - sentence.getStartNode().getOffset();
     }
-
-	System.out.println("" + sentences.size());
-	System.out.println("" + sentLength);
-    sn.features["avgSentLength"] = Math.log((double) sentLength / sentences.size());
+	
+    sn.features["avgSentLength"] = Math.log((double) sentLength / (double) sentences.size());
     
 	lookups = inputAS.get("Lookup", sn.start(), sn.end());
 
