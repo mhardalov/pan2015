@@ -79,6 +79,8 @@
         </gate.util.persistence.AnalyserRunningStrategyPersistence>
         <gate.util.persistence.AnalyserRunningStrategyPersistence>
           <runMode>1</runMode>
+          <featureName></featureName>
+          <featureValue></featureValue>
           <pr class="gate.util.persistence.PRPersistence">
             <runtimeParams class="gate.util.persistence.MapPersistence">
               <mapType>gate.util.SimpleFeatureMapImpl</mapType>
@@ -97,7 +99,7 @@
                 </entry>
                 <entry>
                   <string>copyAnnotations</string>
-                  <boolean>false</boolean>
+                  <boolean>true</boolean>
                 </entry>
                 <entry>
                   <string>tagASName</string>
@@ -105,15 +107,20 @@
                 </entry>
                 <entry>
                   <string>annotationTypes</string>
-                  <null/>
+                  <gate.util.persistence.CollectionPersistence>
+                    <localList>
+                      <string>person</string>
+                    </localList>
+                    <collectionType>java.util.Arrays$ArrayList</collectionType>
+                  </gate.util.persistence.CollectionPersistence>
                 </entry>
                 <entry>
                   <string>inputASName</string>
-                  <null/>
+                  <string>GOLD</string>
                 </entry>
                 <entry>
                   <string>outputASName</string>
-                  <null/>
+                  <string></string>
                 </entry>
               </localMap>
             </runtimeParams>
