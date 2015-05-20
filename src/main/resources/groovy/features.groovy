@@ -43,7 +43,9 @@ inputAS["person"].each { sn ->
     }
 
     AnnotationSet foundUrls = doc.getAnnotations().get("Address");
-    AnnotationSet foundHashtags = doc.getAnnotations().get("Hashtag");    
+    AnnotationSet foundHashtags = doc.getAnnotations().get("Hashtag");
+		AnnotationSet foundUserMetions = doc.getAnnotations().get("UserMention");
+
 
     Map<String, Integer> posMap = new HashMap<String, Integer>();
 		
@@ -78,6 +80,7 @@ inputAS["person"].each { sn ->
 
     sn.features["hashtags"] = (double)foundHashtags.size() / (double)sortedToks.size();
     sn.features["urlLinks"] = (double)foundUrls.size() / (double)sortedToks.size();
+		sn.features["userMantion"] = (double)foundUserMetions.size() / (double)sortedToks.size();
 
     AnnotationSet sentences = doc.getAnnotations().get("Sentence");
 
