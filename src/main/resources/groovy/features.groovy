@@ -19,7 +19,7 @@ inputAS["person"].each { sn ->
 	df["id"] = sf.remove("id");
 
 	// n-grams:
-    /*int minN = 1;
+    int minN = 1;
     int maxN = 2;
     String nGram;
     for (int n = minN; n <= maxN; n++) {
@@ -40,7 +40,7 @@ inputAS["person"].each { sn ->
 				sn.features[fName] = sn.features[fName] + 1
 			}
         }
-    }*/
+    }
 
     AnnotationSet foundUrls = doc.getAnnotations().get("Address");
     AnnotationSet foundHashtags = doc.getAnnotations().get("Hashtag");    
