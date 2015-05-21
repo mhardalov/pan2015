@@ -20,14 +20,14 @@ currGold = new ArrayList<Double>();
 currGuess = new ArrayList<Double>();
 
 // gold is in "person" annotations in GOLD AS
-FeatureMap goldMap = inputAS["person"].iterator().next().getFeatures();
+FeatureMap goldMap = doc.getAnnotations("GOLD").get("person").iterator().next().getFeatures();
 
 // guesses are set as document features (see script label-to-doc.groovy)
 FeatureMap guessMap = doc.getFeatures();
 for(String name : traits) {
-	println("gold " + name + ": " + goldMap[name + "_score"])
+	println("gold " + name + ": " + goldMap[name ])
 	println("guess " + name + ": " + guessMap[name])
-	currGold.add(goldMap[name + "_score"]);
+	currGold.add(goldMap[name]);
 	currGuess.add(guessMap[name]);
 }
 
