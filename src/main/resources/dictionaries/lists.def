@@ -3,4 +3,11 @@ C.csv:wwbp:c
 E.csv:wwbp:e
 S.csv:wwbp:s
 O.csv:wwbp:o
-Hashtag-Emotion-Lexicon.lst:emotions:score
+emo/anticipation.txt:emo:anticipation
+emo/fear.txt:emo:fear
+emo/anger.txt:emo:anger
+emo/trust.txt:emo:trust
+emo/surprise.txt:emo:surprise
+emo/sadness.txt:emo:sadness
+emo/joy.txt:emo:joy
+emo/disgust.txt:emo:disgust
