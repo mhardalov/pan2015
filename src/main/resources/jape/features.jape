@@ -1,0 +1,24 @@
+Phase: picToAnnotations
+Input: Token tweet
+Options: control = appelt
+
+Rule: StartsWithMention
+(
+	{Token.category == "USR", tweet}
+):s
+-->
+:s.StartsWithMention = {rule = "StartsWithMention"}
+
+// NOT WORKING
+/*
+Rule: picToAnnotations
+(
+	({Token@string == "["}
+	{Token@string == "pic"}
+	{Token@string == "]"})
+  |
+  ({Token@string ==~ "(?i)photo|photos|picture|pictures|image|images|pic|pics"})
+):Pictures
+-->
+:Pictures.Pictures = {rule = "picToAnnotations"}
+*/

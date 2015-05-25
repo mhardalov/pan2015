@@ -11,3 +11,6 @@ emo/surprise.txt:emo:surprise
 emo/sadness.txt:emo:sadness
 emo/joy.txt:emo:joy
 emo/disgust.txt:emo:disgust
+badwords/badwords-wdyl.txt:swear:wdyl
+badwords/badwords.txt:swear:manual
+badwords/fuck.txt:swear:fuck

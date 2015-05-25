@@ -52,7 +52,7 @@ void afterCorpus(c) {
 	}
 	
 	for(int j = 0; j < 5; ++j) {
-		println(traits.get(j) + ": " + result.get(j));
+	//	println(traits.get(j) + ": " + result.get(j));
     
     println(traits.get(j) + ": " + Math.sqrt(result.get(j)));
 	}

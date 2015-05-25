@@ -1,0 +1,11 @@
+Phase: negation
+Input: Token Split
+Options: control = appelt
+
+Rule: negationToPunct
+(
+	{Token@string ==~ "(?i)never|no|nothing|nowhere|noone|none|not|havent|hasnt|hadnt|cant|couldnt|shouldnt|wont|wouldnt|dont|doesnt|didnt|isnt|arent|aint|n't" }
+	({Token@string !=~ "[.:;!?]", !Split})[1,9]
+	
+):neg
+--> :neg.negation = {rule = "negationToPunct"}

@@ -1,0 +1,14 @@
+Phase: normalize
+Input: Token tweet
+Options: control = appelt
+
+Rule: clearUpperCase
+(
+ {Token, Token.orth != "lowercase", !tweet}
+) :ent
+-->
+:ent {
+	FeatureMap fm = entAnnots.iterator().next().getFeatures();
+	fm.put("origString", fm.get("string"));
+	fm.put("string", "_UPPER");
+}

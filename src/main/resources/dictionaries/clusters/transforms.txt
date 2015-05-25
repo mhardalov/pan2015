@@ -1,0 +1,2 @@
+sed -i 's/\t[0-9]\+$//g' 50mpaths2
+sed -i 's/\([0-9]\+\)\t\(.*\)/\2\tcluster=\1/g' 50mpaths2
